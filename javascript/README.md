@@ -1945,7 +1945,7 @@ When writing JavaScript for the web, do your best to apply these philosophies at
     ```
 
   
-  - **Do** use PascalCase only when naming constructors or classes. 
+  - **Do** use PascalCase when naming constructors, classes and interfaces. 
 
     ```javascript
     /* avoid */
@@ -1967,6 +1967,17 @@ When writing JavaScript for the web, do your best to apply these philosophies at
     var good = new User({
       name: 'yup'
     });
+    ```
+    
+    
+  - **Do** use PascalCase when naming enums. Try to name your enums as singular nouns. Individual items within the enum should be named in `CONSTANT_CASE`.
+
+    ```javascript
+    /* good */
+    var HTTPStatus  = {
+      PAGE_NOT_FOUND: 404,
+      INTERNAL_SERVER_ERROR: 500
+    }
     ```
 
   
