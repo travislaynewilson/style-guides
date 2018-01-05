@@ -2443,6 +2443,8 @@ When writing JavaScript for the web, do your best to apply these philosophies at
   - **Consider** throttling or debouncing certain event handlers, like window resizing, to maximize performance.
 
 
+**[⬆ back to top](#table-of-contents)**
+
 
 
 ## Libraries
@@ -2454,7 +2456,6 @@ Here is a list of libraries we use in most projects:
   - **[Bowser](https://github.com/lancedikson/bowser)**: Browser detector
   - **[Enquire](https://github.com/WickyNilliams/enquire.js/)**: Programatically responding to media queries
   - **[es6-promise](https://github.com/stefanpenner/es6-promise)**: ECMAScript 6 Promises polyfill
-  - **[es6-shim](https://github.com/paulmillr/es6-shim)**: ECMAScript 6 polyfill collection
   - **[Hammer](https://hammerjs.github.io/)**: Touch gesture support
   - **[Lodash](https://lodash.com/)**: Common functional utilities 
   - **[Moment](https://momentjs.com/)**: Parse, validate, manipulate, and display dates and times    
@@ -2464,3 +2465,6 @@ Here is a list of libraries we use in most projects:
   - **[Velocity](http://velocityjs.org/)**: Animation engine
   - **[Vue](https://vuejs.org/)**: MVVM library for rich UI management
   - **[zxcvbn](https://github.com/dropbox/zxcvbn)**: Password strength estimation
+
+
+**[⬆ back to top](#table-of-contents)**
