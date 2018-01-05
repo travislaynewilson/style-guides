@@ -4,6 +4,7 @@
 
 ## Table of Contents
 
+  1. [Philosophies](#philosophies)
   1. [Objects](#objects)
   1. [Arrays](#arrays)
   1. [Strings](#strings)
@@ -27,6 +28,19 @@
   1. [jQuery](#jquery)
 
 
+
+## Philosophies
+
+When writing JavaScript for the web, do your best to apply these philosophies to every line of code:
+
+  - **Object-oriented & Testable**: Your code should work as if the DOM didn't exist. 
+  
+  - **Consistent**: Your project as a whole should look like it was written by a single developer.
+  
+  - **Modular**: Your code should follow the [single responsibility principal (SRP)](https://en.wikipedia.org/wiki/Single_responsibility_principle)
+  
+  - **LIFT**: Your application should be structured such that you can (in order of importance): *locate* code quickly, *identify* the code at a glance, keep the *flattest* structure you can, and *try* to be DRY.
+    
 
 ## Objects
 
