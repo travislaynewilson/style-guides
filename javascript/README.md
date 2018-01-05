@@ -124,19 +124,19 @@
     };
     ```
     
-  - **Avoid** trailing commas after the last property of an oject.
+  - **Consider** including [trailing commas](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Trailing_commas) after the last property of an object.
 
-    > Why? Although most JS engines will gracefully ignore them, trailing commas are unnecessary and lazy.
+    > Why? Trailing commas can make version-control diffs cleaner and editing code might be less troublesome.
 
     ```javascript
-    /* avoid */
-    var bad = {
+    /* valid in modern browsers and >IE9 */
+    var trailing = {
       foo: 3,
       bar: 4,
     };
 
-    /* good */
-    var good = {
+    /* valid in all browsers */
+    var clean = {
       foo: 3,
       bar: 4
     };
@@ -200,6 +200,19 @@
 
     /* good */
     var nodes = Array.from(foo);
+    ```
+    
+    
+    - **Consider** including [trailing commas](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Trailing_commas) after the last value in an array.
+
+    > Why? Trailing commas can make version-control diffs cleaner and editing code might be less troublesome.
+
+    ```javascript
+    /* valid in modern browsers and >IE9 */
+    var trailing = [1, 2, 3,];
+
+    /* valid in all browsers */
+    var clean = [1, 2, 3];
     ```
 
 
@@ -338,7 +351,6 @@
     ```
     
 
-
   - **Avoid** unnecessarily escaping characters in strings.
 
     > Why? Backslashes harm readability, thus they should only be present when necessary.
@@ -350,6 +362,205 @@
     /* good */
     var foo = '\'this\' is "quoted"';
     var foo = `my name is '${name}'`;
+    ```
+
+**[⬆ back to top](#table-of-contents)**
+
+
+
+
+
+## Functions
+
+  
+  - **Do** wrap immediately invoked function expressions (IIFE) in parentheses.
+
+    > Why? An immediately invoked function expression is a single unit - wrapping both it, and its invocation parens, in parens, cleanly expresses this. Note that in a world with modules everywhere, you almost never need an IIFE.
+
+    ```javascript
+    /* avoid - although this works and saves us a character, it's more difficult to read */
+    +function () {
+      console.log('Welcome to the Internet. Please follow me.');
+    }();
+    
+    /* avoid - does not include the invocation parens in the wrapping parens */
+    (function () {
+      console.log('Welcome to the Internet. Please follow me.');
+    })();
+    
+    /* good */
+    (function () {
+      console.log('Welcome to the Internet. Please follow me.');
+    }());
+    ```
+
+
+  - **Avoid** declaring functions in a non-function block (`if`, `while`, etc). Assign the function to a variable instead.
+  
+    > Why?  Browsers will allow you to do it, but they all interpret it differently.
+    
+    > Note: ECMA-262 defines a `block` as a list of statements. A function declaration is not a statement.
+
+    ```javascript
+    /* avoid */
+    if (currentUser) {
+      function test() {
+        console.log('Nope.');
+      }
+    }
+
+    /* good */
+    var test;
+    if (currentUser) {
+      test = function() {
+        console.log('Yup.');
+      };
+    }
+    ```
+
+
+  - **Avoid** naming a parameter `arguments`. This will take precedence over the `arguments` object that is given to every function scope.
+
+    ```javascript
+    /* avoid */
+    function foo(name, options, arguments) {
+      // ...
+    }
+
+    /* good */
+    function foo(name, options, args) {
+      // ...
+    }
+    ```
+
+  <a name="es6-rest"></a><a name="7.6"></a>
+  - **Consider** using rest syntax `...` instead of slicing `arguments`, if the browser supports it.
+
+    > Why? `...` is explicit about which arguments you want pulled. Plus, rest arguments are a real Array, and not merely Array-like like `arguments`.
+
+    ```javascript
+    /* ugly, but browser-safe */
+    function concatenateAll() {
+      var args = Array.prototype.slice.call(arguments);
+      return args.join('');
+    }
+
+    /* better, if allowed */
+    function concatenateAll(...args) {
+      return args.join('');
+    }
+    ```
+
+
+  - **Avoid** using the Function constructor to create a new function. 
+
+    > Why? Creating a function in this way evaluates a string similarly to eval(), which opens vulnerabilities.
+
+    ```javascript
+    /* avoid */
+    var add = new Function('a', 'b', 'return a + b');
+
+    /* avoid */
+    var subtract = Function('a', 'b', 'return a - b');
+    
+    /* good */
+    var subtract = function(a, b) {
+      return a - b;
+    };
+    ```
+
+
+  - **Do** apply a space between the parens and the braces in a function signature.
+
+    > Why? Consistency is nice.
+
+    ```javascript
+    /* avoid */
+    var f = function(){};
+    var g = function (){};
+
+    /* good */
+    var x = function() {};
+    var y = function a() {};
+    ```
+
+  
+  - **Avoid** mutating parameters. 
+
+    > Why? Manipulating objects passed in as parameters can cause unwanted variable side effects in the original caller.
+
+    ```javascript
+    /* avoid */
+    function f1(obj) {
+      obj.key = 1;
+    }
+
+    /* good */
+    function f2(obj) {
+      var key = Object.prototype.hasOwnProperty.call(obj, 'key') ? obj.key : 1;
+    }
+    ```
+
+  - **Avoid** reassigning parameters.
+
+    > Why? Reassigning parameters can lead to unexpected behavior, especially when accessing the `arguments` object. It can also cause optimization issues, especially in V8.
+
+    ```javascript
+    /* avoid */
+    function f1(a) {
+      a = 1;
+      // ...
+    }
+
+    /* avoid */
+    function f2(a) {
+      if (!a) { a = 1; }
+      // ...
+    }
+
+    /* good */
+    function f3(a) {
+      var b = a || 1;
+      // ...
+    }
+
+    /* best, if supported */
+    function f4(a = 1) {
+      // ...
+    }
+    ```
+
+  
+  - **Do** indent functions with multiline signatures, or invocations, just like every other multiline list in this guide: with each item on a line by itself, with a trailing comma on the last item.
+
+    ```javascript
+    /* avoid */
+    function foo(bar,
+                 baz,
+                 quux) {
+      // ...
+    }
+
+    /* good */
+    function foo(
+      bar,
+      baz,
+      quux
+    ) {
+      // ...
+    }
+
+    /* avoid */
+    console.log(foo,
+      bar,
+      baz);
+
+    /* good */
+    console.log(
+      foo,
+      bar,
+      baz
+    );
     ```
 
 **[⬆ back to top](#table-of-contents)**
