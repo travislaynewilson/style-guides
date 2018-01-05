@@ -1351,6 +1351,25 @@ When writing JavaScript for the web, do your best to apply these philosophies at
     ```
     
     
+    
+  - **Do** document your enums using [JSDoc](http://usejsdoc.org/) syntax.
+
+    ```javascript
+    /**
+     * Types of bandersnatches.
+     * @enum {string}
+     */
+    var BandersnatchType = {
+      /** This kind is really frumious. */
+      FRUMIOUS: 'frumious',
+      
+      /** The less-frumious kind. */
+      MANXOME: 'manxome'
+    };
+    ```
+    
+    
+    
   - **Avoid** committing commented-out code into version control.
   
     > Why? Old, unused code in source control leads to polluted source code.
