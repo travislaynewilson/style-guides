@@ -18,9 +18,9 @@
   1. [Whitespace](#whitespace)
   1. [Commas](#commas)
   1. [Semicolons](#semicolons)
-  <!--1. [Type Casting & Coercion](#type-casting--coercion)
+  1. [Type Casting & Coercion](#type-casting--coercion)
   1. [Naming Conventions](#naming-conventions)
-  1. [Accessors](#accessors)
+  <!--1. [Accessors](#accessors)
   1. [Events](#events)
   1. [jQuery](#jquery)
   1. [ECMAScript 5 Compatibility](#ecmascript-5-compatibility)
@@ -410,6 +410,40 @@
       test = function() {
         console.log('Yup.');
       };
+    }
+    ```
+    
+    
+  - **Avoid** saving references to `this`. Use [Function#bind](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind).
+
+    > Why? Binding a function should be an explicit operation that demonstrates the developer's intent. Generally speaking, variables in functions are expected to be used to help the function execute it's purpose. Saving a reference to `this` adds another variable to the function scope that merely serves to reference itself as a context, which isn't generally expected.
+
+    ```javascript
+    /* avoid */
+    function foo() {
+      var self = this;
+      
+      return function () {
+        console.log(self);
+      };
+    }
+
+
+    /* avoid */
+    function foo() {
+      var that = this;
+      
+      return function () {
+        console.log(that);
+      };
+    }
+
+
+    /* good */
+    function foo() {
+      return (function() {
+        console.log(this);
+      }).bind(this);
     }
     ```
 
@@ -1607,7 +1641,7 @@
   
   - **Do** coerce numbers using the `Number` global object and `parseInt`. When using `parseInt`, provide a radix to clarify the base in the intended mathematical numeral system (usually 10 for the decimal numeral system commonly used by humans).
 
-    > Why? Defining the radix when using `parseInt` eliminates reader confusion and guarantees predictable behavior. Different implementations produce different results when a radix is not specified, usually defaulting the value to 10.
+    > Why? Defining the radix when using `parseInt` eliminates reader confusion and guarantees predictable behavior. Different implementations produce different results when a radix is not specified.
     
     ```javascript
     var inputValue = '4';
@@ -1670,5 +1704,164 @@
     /* best */
     var hasAge = !!age;
     ```
+
+**[⬆ back to top](#table-of-contents)**
+
+
+
+
+## Naming Conventions
+
+  
+  - **Avoid** single letter names. Be descriptive with your naming.
+
+    ```javascript
+    /* avoid */
+    function q() {
+      // ...
+    }
+
+    /* good */
+    function query() {
+      // ...
+    }
+    ```
+
+  
+  - **Do** use camelCase when naming objects, functions, and instances.
+
+    ```javascript
+    /* avoid */
+    var OBJEcttsssss = {};
+    var this_is_my_object = {};
+    function c() {}
+
+    /* good */
+    var thisIsMyObject = {};
+    function thisIsMyFunction() {}
+    ```
+
+  
+  - **Do** use PascalCase only when naming constructors or classes. 
+
+    ```javascript
+    /* avoid */
+    function user(options) {
+      this.name = options.name;
+    }
+
+    var bad = new user({
+      name: 'nope'
+    });
+
+    /* good */
+    class User {
+      constructor(options) {
+        this.name = options.name;
+      }
+    }
+
+    var good = new User({
+      name: 'yup'
+    });
+    ```
+
+  
+  - **Avoid** using trailing or leading underscores.
+
+    > Why? JavaScript does not have the concept of privacy in terms of properties or methods. Although a leading underscore is a common convention to mean “private”, in fact, these properties are fully public, and as such, are part of your public API contract. This convention might lead developers to wrongly think that a change won’t count as breaking, or that tests aren’t needed. tl;dr: if you want something to be “private”, it must not be observably present.
+
+    ```javascript
+    /* avoid */
+    this.__firstName__ = 'Panda';
+    this.firstName_ = 'Panda';
+    this._firstName = 'Panda';
+    var _firstName = 'Panda';
+    function _add() {}
+
+    /* good */
+    this.firstName = 'Panda';
+    var firstName = 'Panda';
+    function add() {}
+    ```
+
+
+  - **Do** name acronyms and initialisms as all capitalized, or all lowercased.
+
+    > Why? Names are for readability, not to appease a computer algorithm.
+
+    ```javascript
+
+    /* avoid */
+    var HttpRequests = [
+      // ...
+    ];
+
+    /* good */
+    var HTTPRequests = [
+      // ...
+    ];
+
+    /* good */
+    var httpRequests = [
+      // ...
+    ];
+    ```
+    
+    
+  - **Do** use consistent file names for all assets named after what they represent. Use only lowercase file names. Use dashes to separate words, acronyms and initialisms in the file name.
+
+    ```javascript
+    export function SessionContext() {
+      // ...
+    }
+
+    /* avoid */
+    SessionContext.js
+    sessionContext.js
+    Session-Context.js    
+    
+    /* good */
+    session-context.js
+    ```
+    
+    
+   - **Do** use conventional type names when applicable, including a suffix like `.service`, `.store`, `.module` and `.util`. Avoid using appreviated type names, such as `.svc`. Invent additional type names if you feel it's appropriate, but take care not to create too many.
+
+    > Why? Type names provide a consistent way to quickly identify what is in the file, and make searching for a specific file type easy using many IDE's search techniques.
+
+    ```javascript
+    export function UserAuthService() {
+      // ...
+    }
+
+    /* avoid */
+    user-auth.js
+    user-auth-service.js
+    user-auth.service.js
+    user-auth.svc.js    
+    
+    /* good */
+    user-auth.service.js
+    ```
+    
+    
+    
+    - **Do** name test specification files the same as the file they test, followed with the suffix `.spec`.
+
+    > Why? The suffix `.spec` provides a consistent way to quickly identify tests and provides pattern matching for [Karma](http://karma-runner.github.io/) and other test runners. It also helps the file and it's tests stay together in IDE file trees.
+
+    ```javascript
+    user-auth.service.js
+
+    /* avoid */
+    spec.user-auth.service.js
+    user-auth-service.spec.js
+    user-auth.spec.js
+    
+    /* good */
+    user-auth.service.spec.js
+    ```
+    
 
 **[⬆ back to top](#table-of-contents)**
