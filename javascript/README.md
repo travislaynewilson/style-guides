@@ -31,7 +31,7 @@
 
 ## Philosophies
 
-When writing JavaScript for the web, do your best to apply these philosophies to every line of code:
+When writing JavaScript for the web, do your best to apply these philosophies at every decision:
 
   - **Object-oriented & Testable**: Your code should work as if the DOM didn't exist. 
   
