@@ -57,9 +57,9 @@
     ```
 
 
-  - **Do** use property value shorthand.
+  - **Do** use property value shorthand when possible.
 
-    > Why? It is shorter to write and descriptive.
+    > Why? It is shorter to write, descriptive and DRY.
 
     ```javascript
     var lukeSkywalker = 'Luke Skywalker';
@@ -158,6 +158,86 @@
     /* best */
     var hasOwnProperty = Object.prototype.hasOwnProperty; // cache the lookup once, in module scope.
     console.log(hasOwnProperty.call(object, key));
+    ```
+
+**[⬆ back to top](#table-of-contents)**
+
+
+
+
+
+## Arrays
+
+  - **Do** use the literal syntax for array creation.
+
+    ```javascript
+    /* avoid */
+    var items = new Array();
+
+    /* good */
+    var items = [];
+    ```
+
+
+  - **Do** use [Array#push](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/push) instead of direct assignment to add items to an array.
+
+    ```javascript
+    var someStack = [];
+
+    /* avoid */
+    someStack[someStack.length] = 'abracadabra';
+
+    /* good */
+    someStack.push('abracadabra');
+    ```
+
+
+  - **Do** Convert array-like objects to arrays using [Array.from](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/from).
+  
+    > Note: Ensure that [Array.from](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/from) is polyfilled into your application to support older browsers.
+
+    ```javascript
+    var foo = document.querySelectorAll('.foo');
+
+    /* good */
+    var nodes = Array.from(foo);
+    ```
+
+
+  - **Do** use line breaks after open and before close array brackets if an array has multiple lines.
+  
+  > Why? In general, we consider it subjectively easier to read. 
+
+    ```javascript
+    /* avoid */
+    var arr = [
+      [0, 1], [2, 3], [4, 5]
+    ];
+
+    var objectInArray = [{
+      id: 1
+    }, {
+      id: 2
+    }];
+
+    var numberInArray = [
+      1, 2
+    ];
+
+
+    /* good */
+    var arr = [[0, 1], [2, 3], [4, 5]];
+
+    var objectInArray = [
+      {
+        id: 1
+      },
+      {
+        id: 2
+      }
+    ];
+
+    var numberInArray = [1, 2];
     ```
 
 **[⬆ back to top](#table-of-contents)**
