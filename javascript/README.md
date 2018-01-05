@@ -2453,6 +2453,7 @@ Here is a list of libraries we use in most projects:
   - **[Bluebird](http://bluebirdjs.com)**: Promises
   - **[Bowser](https://github.com/lancedikson/bowser)**: Browser detector
   - **[Enquire](https://github.com/WickyNilliams/enquire.js/)**: Programatically responding to media queries
+  - **[es6-promise](https://github.com/stefanpenner/es6-promise)**: ECMAScript 6 Promises polyfill
   - **[es6-shim](https://github.com/paulmillr/es6-shim)**: ECMAScript 6 polyfill collection
   - **[Hammer](https://hammerjs.github.io/)**: Touch gesture support
   - **[Lodash](https://lodash.com/)**: Common functional utilities 
