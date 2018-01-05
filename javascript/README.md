@@ -2274,3 +2274,19 @@
     /* good */
     $(function() {});
     ```
+    
+    
+  - **Do** use delegated event handlers.
+  
+    > Why? Delegated event handlers are only registered to a single element, work for any decendents in the DOM, work for static- and dynamically-injected DOM elements and result in a more performant experience, thanks to [JavaScript event bubbling](https://en.wikipedia.org/wiki/Event_bubbling).
+
+    ```javascript
+    /* avoid */
+    $('.form .submit').on('click', function() {});
+
+    /* good */
+    $('.form').on('click', '.submit', function() {});
+    ```
+    
+    
+  - **Consider** throttling or debouncing certain event handlers, like window resizing, to maximize performance.
