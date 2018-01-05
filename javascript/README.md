@@ -2015,6 +2015,10 @@
 
 ## jQuery
 
+  - **Consider** not using jQuery in your application.
+  
+    > Why? The best quality web JavaScript code separates the model from the view, and is written to be testable and object-oriented. Direct access to the DOM results in your JavaScript being tightly-coupled to your view. It also encourages the view to contain state, which makes testing very difficult. Lastly, jQuery makes it tempting to query the DOM frequently, and with modern browsers becoming more performant each year, it's easy to miss performance concerns on weaker computers and mobile devices.
+
   
   - **Do** prefix jQuery object variables with a `$`.
 
