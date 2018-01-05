@@ -2221,7 +2221,7 @@ When writing JavaScript for the web, do your best to apply these philosophies at
     ```
   
   
-  - **Do** write service methods that return Promises if the method is capable of or expected to of making an asyncronous request to another resource. When deciding if you should return a Promise, consider how mocks of the method would work. When in doubt, return a Promise.
+  - **Do** write service methods that return Promises if the method is capable of or expected to make an asyncronous request for another resource. Keep in mind how testing of the method would work. When in doubt, return a Promise.
   
     > Why? Returning a promise helps to future-proof the method in case an async call needs to be made in the future.
   
