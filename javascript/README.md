@@ -204,7 +204,7 @@
     ```
 
 
-  - **Do** use line breaks after open and before close array brackets if an array has multiple lines.
+- **Do** use line breaks after open and before close array brackets if an array has multiple lines.
   
   > Why? In general, we consider it subjectively easier to read. 
 
