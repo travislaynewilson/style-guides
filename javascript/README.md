@@ -78,7 +78,7 @@
     var anakinSkywalker = 'Anakin Skywalker',
         lukeSkywalker = 'Luke Skywalker';
 
-    // bad
+    /* avoid */
     var obj = {
       episodeOne: 1,
       twoJediWalkIntoACantina: 2,
@@ -88,7 +88,7 @@
       anakinSkywalker
     };
 
-    // good
+    /* good */
     var obj = {
       lukeSkywalker,
       anakinSkywalker,
@@ -263,7 +263,7 @@
     var name = "Capt. Janeway";
     
     /* avoid - template literals should contain interpolation or newlines */
-    const name = `Capt. Janeway`;
+    var name = `Capt. Janeway`;
     
     /* good */
     var name = 'Capt. Janeway';
@@ -1468,7 +1468,7 @@
 
     ```javascript
     /* avoid */
-    const foo = jsonData && jsonData.foo && jsonData.foo.bar && jsonData.foo.bar.baz && jsonData.foo.bar.baz.quux && jsonData.foo.bar.baz.quux.xyzzy;
+    var foo = jsonData && jsonData.foo && jsonData.foo.bar && jsonData.foo.bar.baz && jsonData.foo.bar.baz.quux && jsonData.foo.bar.baz.quux.xyzzy;
 
     /* avoid */
     $.ajax({ method: 'POST', url: 'https://airbnb.com/', data: { name: 'John' } }).done(() => console.log('Congratulations!')).fail(() => console.log('You have failed this city.'));
@@ -1516,7 +1516,7 @@
     ];
 
     /* avoid */
-    const hero = {
+    var hero = {
         firstName: 'Ada'
       , lastName: 'Lovelace'
       , birthYear: 1815
@@ -1524,7 +1524,7 @@
     };
 
     /* good */
-    const hero = {
+    var hero = {
       firstName: 'Ada',
       lastName: 'Lovelace',
       birthYear: 1815,
