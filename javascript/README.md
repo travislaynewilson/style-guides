@@ -2454,12 +2454,11 @@ Here is a list of libraries we use in most projects.
   - **[Enquire](https://github.com/WickyNilliams/enquire.js/)**: Programatically responding to media queries
   - **[es6-shim](https://github.com/paulmillr/es6-shim)**: ECMAScript 6 polyfill collection
   - **[Hammer](https://hammerjs.github.io/)**: Touch gesture support
-  - **[Lodash](https://lodash.com/)**: Common functional utilities, including: 
-    - Iterating arrays, objects, & strings
-    - Manipulating & testing values
-    - Creating composite functions    
+  - **[Lodash](https://lodash.com/)**: Common functional utilities 
   - **[Moment](https://momentjs.com/)**: Parse, validate, manipulate, and display dates and times    
   - **[Postal](https://github.com/postaljs/postal.js)**: In-memory message bus
   - **[RequireJS](http://requirejs.org/)**: AMD loader
+  - **[Store](https://github.com/marcuswestin/store.js)**: Cross-browser storage
+  - **[Velocity](http://velocityjs.org/)**: Animation engine
   - **[Vue](https://vuejs.org/)**: MVVM library for rich UI management
   - **[zxcvbn](https://github.com/dropbox/zxcvbn)**: Password strength estimation
