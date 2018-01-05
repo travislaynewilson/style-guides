@@ -2447,7 +2447,7 @@ When writing JavaScript for the web, do your best to apply these philosophies at
 
 ## Libraries
 
-Here is a list of libraries we use in most projects.
+Here is a list of libraries we use in most projects:
 
   - **[Bluebird](http://bluebirdjs.com)**: Promises
   - **[Bowser](https://github.com/lancedikson/bowser)**: Browser detector
