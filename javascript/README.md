@@ -939,3 +939,68 @@
     ```
 
 **[⬆ back to top](#table-of-contents)**
+
+
+
+
+## Control Statements
+
+
+  - **Do** put each (grouped) condition onto a new line when your control statement (`if`, `while` etc.) gets too long or exceeds the maximum line length. The logical operator should begin the line.
+
+    > Why? Requiring operators at the beginning of the line keeps the operators aligned and follows a pattern similar to method chaining. This also improves readability by making it easier to visually follow complex logic.
+
+    ```javascript
+    /* avoid */
+    if ((foo === 123 || bar === 'abc') && doesItLookGoodWhenItBecomesThatLong() && isThisReallyHappening()) {
+      thing1();
+    }
+
+    /* avoid */
+    if (foo === 123 &&
+      bar === 'abc') {
+      thing1();
+    }
+
+    /* avoid */
+    if (foo === 123
+      && bar === 'abc') {
+      thing1();
+    }
+
+    /* avoid */
+    if (
+      foo === 123 &&
+      bar === 'abc'
+    ) {
+      thing1();
+    }
+
+    /* good */
+    if (
+      foo === 123
+      && bar === 'abc'
+    ) {
+      thing1();
+    }
+
+    /* good */
+    if (
+      (foo === 123 || bar === "abc")
+      && doesItLookGoodWhenItBecomesThatLong()
+      && isThisReallyHappening()
+    ) {
+      thing1();
+    }
+
+    /* good */
+    if (foo === 123 && bar === 'abc') {
+      thing1();
+    }
+    ```
+
+**[⬆ back to top](#table-of-contents)**
+
+
+
+
