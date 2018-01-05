@@ -1037,17 +1037,17 @@
 
     ```javascript
     /* avoid */
-    const active = true;  // is current tab
+    var active = true;  // is current tab
 
     /* good */
     // is current tab
-    const active = true;
+    var active = true;
 
     /* avoid - no line above the comment */
     function getType() {
       console.log('fetching type...');
       // set the default type to 'no type'
-      const type = this.type || 'no type';
+      var type = this.type || 'no type';
 
       return type;
     }
@@ -1057,7 +1057,7 @@
       console.log('fetching type...');
 
       // set the default type to 'no type'
-      const type = this.type || 'no type';
+      var type = this.type || 'no type';
 
       return type;
     }
@@ -1065,7 +1065,7 @@
     /* good */
     function getType() {
       // set the default type to 'no type'
-      const type = this.type || 'no type';
+      var type = this.type || 'no type';
 
       return type;
     }
@@ -1077,11 +1077,11 @@
     ```javascript
     /* avoid */
     //is current tab
-    const active = true;
+    var active = true;
 
     /* good */
     // is current tab
-    const active = true;
+    var active = true;
 
     /* avoid */
     /**
@@ -1105,7 +1105,7 @@
     ```
 
 
-  - **Do** prefix your comments with `TODO[Name]` to help other developers quickly understand if you're pointing out a problem that needs to be revisited, or if you're suggesting a solution to the problem that needs to be implemented. These are different than regular comments because they are actionable. 
+  - **Do** prefix your actionable comments with `TODO[Name]` to help other developers quickly understand if you're pointing out a problem that needs to be revisited, or if you're suggesting a solution to the problem that needs to be implemented. These are different than regular comments because they are actionable. 
 
     ```javascript
     function make(tag) {
@@ -1149,3 +1149,277 @@
     ```
 
 **[⬆ back to top](#table-of-contents)**
+
+
+
+
+## Whitespace
+
+  
+  - **Do** place 1 space before the leading brace.
+    ```javascript
+    /* avoid */
+    function test(){
+      console.log('test');
+    }
+
+    /* good */
+    function test() {
+      console.log('test');
+    }
+
+    /* avoid */
+    dog.set('attr',{
+      age: '1 year',
+      breed: 'Bernese Mountain Dog',
+    });
+
+    /* good */
+    dog.set('attr', {
+      age: '1 year',
+      breed: 'Bernese Mountain Dog',
+    });
+    ```
+
+  
+  - **Do** place 1 space before the opening parenthesis in control statements (`if`, `while` etc.). Place no space between the argument list and the function name in function calls and declarations.
+
+    ```javascript
+    /* avoid */
+    if(isJedi) {
+      fight ();
+    }
+
+    /* good */
+    if (isJedi) {
+      fight();
+    }
+
+    /* avoid */
+    function fight () {
+      console.log ('Swooosh!');
+    }
+
+    /* good */
+    function fight() {
+      console.log('Swooosh!');
+    }
+    ```
+
+
+  - **Do** set off operators with spaces.
+
+    ```javascript
+    /* avoid */
+    var x=y+5;
+
+    /* good */
+    var x = y + 5;
+    ```
+
+  
+  - **Do** end files with a single newline character.
+
+    ```javascript
+    /* avoid */
+    require(['es6'], function(es6) {
+      // ...
+    });
+    ```
+
+    ```javascript
+    /* avoid */
+    require(['es6'], function(es6) {
+      // ...
+    });↵
+    ↵
+    ```
+
+    ```javascript
+    /* good */
+    require(['es6'], function(es6) {
+      // ...
+    });↵
+    ```
+
+
+  - **Do** use indentation when making long method chains (more than 2 method chains). Use a leading dot, which
+    emphasizes that the line is a method call, not a new statement. 
+
+    ```javascript
+    /* avoid */
+    $('#items').find('.selected').highlight().end().find('.open').updateCount();
+
+    /* avoid */
+    $('#items').
+      find('.selected').
+        highlight().
+        end().
+      find('.open').
+        updateCount();
+
+    /* good */
+    $('#items')
+      .find('.selected')
+        .highlight()
+        .end()
+      .find('.open')
+        .updateCount();
+
+    /* avoid */
+    var leds = stage.selectAll('.led').data(data).enter().append('svg:svg').classed('led', true)
+        .attr('width', (radius + margin) * 2).append('svg:g')
+        .attr('transform', `translate(${radius + margin},${radius + margin})`)
+        .call(tron.led);
+
+    /* good */
+    var leds = stage.selectAll('.led')
+        .data(data)
+      .enter().append('svg:svg')
+        .classed('led', true)
+        .attr('width', (radius + margin) * 2)
+      .append('svg:g')
+        .attr('transform', `translate(${radius + margin},${radius + margin})`)
+        .call(tron.led);
+
+    /* good */
+    var leds = stage.selectAll('.led').data(data);
+    ```
+
+
+  - **Do** leave a blank line after blocks and before the next statement.
+
+    ```javascript
+    /* avoid */
+    if (foo) {
+      return bar;
+    }
+    return baz;
+
+
+    /* good */
+    if (foo) {
+      return bar;
+    }
+
+    return baz;
+    ```
+
+
+
+  - **Avoid** padding your blocks with blank lines.
+
+    ```javascript
+    /* avoid */
+    function bar() {
+
+      console.log(foo);
+
+    }
+
+    /* avoid */
+    if (baz) {
+
+      console.log(qux);
+    } else {
+      console.log(foo);
+
+    }
+
+    /* good */
+    function bar() {
+      console.log(foo);
+    }
+
+    /* good */
+    if (baz) {
+      console.log(qux);
+    } else {
+      console.log(foo);
+    }
+    ```
+
+  - **Avoid** adding spaces inside parentheses.
+
+    ```javascript
+    /* avoid */
+    function bar( foo ) {
+      return foo;
+    }
+
+    /* good */
+    function bar(foo) {
+      return foo;
+    }
+
+    /* avoid */
+    if ( foo ) {
+      console.log(foo);
+    }
+
+    /* good */
+    if (foo) {
+      console.log(foo);
+    }
+    ```
+
+
+  - **Avoid** adding spaces inside brackets.
+
+    ```javascript
+    /* avoid */
+    var foo = [ 1, 2, 3 ];
+    console.log(foo[ 0 ]);
+
+    /* good */
+    var foo = [1, 2, 3];
+    console.log(foo[0]);
+    ```
+
+  
+  - **Do** add spaces inside curly braces.
+
+    ```javascript
+    /* avoid */
+    var foo = {clark: 'kent'};
+
+    /* good */
+    var foo = { clark: 'kent' };
+    ```
+
+
+  - **Avoid** having lines of code that are longer than 100 characters (including whitespace). 
+  
+    > Why? This ensures readability and maintainability.
+    
+    > Note: Per [above](#strings--line-length), long strings are exempt from this rule and should not be broken up.
+
+    ```javascript
+    /* avoid */
+    const foo = jsonData && jsonData.foo && jsonData.foo.bar && jsonData.foo.bar.baz && jsonData.foo.bar.baz.quux && jsonData.foo.bar.baz.quux.xyzzy;
+
+    /* avoid */
+    $.ajax({ method: 'POST', url: 'https://airbnb.com/', data: { name: 'John' } }).done(() => console.log('Congratulations!')).fail(() => console.log('You have failed this city.'));
+
+    /* good */
+    var foo = jsonData
+      && jsonData.foo
+      && jsonData.foo.bar
+      && jsonData.foo.bar.baz
+      && jsonData.foo.bar.baz.quux
+      && jsonData.foo.bar.baz.quux.xyzzy;
+
+    /* good */
+    $.ajax({
+      method: 'POST',
+      url: 'https://airbnb.com/',
+      data: { name: 'John' }
+    })
+      .done(() => console.log('Congratulations!'))
+      .fail(() => console.log('You have failed this city.'));
+    ```
+
+**[⬆ back to top](#table-of-contents)**
+
+
+
