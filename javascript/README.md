@@ -2462,3 +2462,4 @@ Here is a list of preferred libraries.
   - **[Postal](https://github.com/postaljs/postal.js)**: In-memory message bus
   - **[RequireJS](http://requirejs.org/)**: AMD loader
   - **[Vue](https://vuejs.org/)**: MVVM library for rich UI management
+  - **[zxcvbn](https://github.com/dropbox/zxcvbn)**: Password strength estimation
