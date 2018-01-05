@@ -24,18 +24,6 @@
   1. [Accessors](#accessors)
   1. [Events](#events)
   1. [jQuery](#jquery)
-  <!--1. [ECMAScript 5 Compatibility](#ecmascript-5-compatibility)
-  1. [Standard Library](#standard-library)
-  1. [Testing](#testing)
-  1. [Performance](#performance)
-  1. [Resources](#resources)
-  1. [In the Wild](#in-the-wild)
-  1. [Translation](#translation)
-  1. [The JavaScript Style Guide Guide](#the-javascript-style-guide-guide)
-  1. [Chat With Us About JavaScript](#chat-with-us-about-javascript)
-  1. [Contributors](#contributors)
-  1. [License](#license)
-  1. [Amendments](#amendments)-->
 
 
 
@@ -2142,7 +2130,7 @@
   
     > Why? Without contextualization, your DOM queries could affect unintended elements.
 
-    ```javascript
+    ```html
     <div id="mywidget">
       <section class="card">
         <header class="card-header">
@@ -2153,8 +2141,8 @@
         </article>
       </section>
     </div>
-    
-        
+    ```
+    ```javascript
     /* avoid */
     $('.card').hide();
 
@@ -2169,7 +2157,7 @@
   
     > Why? Querying DOM elements by ID is much faster and more performant than querying by class names or `[data]` attributes.
 
-    ```javascript
+    ```html
     <section class="card" id="mycard">
       <header class="card-header">
         <h4 class="card-title">Weather</h4>
@@ -2178,8 +2166,8 @@
         <p>Sunny!</p>
       </article>
     </section>
-    
-        
+    ```
+    ```javascript
     /* avoid */
     var title = $('.card .card-title').text();
     var title = $('.card').find('.card-title').text();
@@ -2193,7 +2181,7 @@
   
     > Why? The more precise a selector is, the more tightly-coupled the jQuery call is to the current DOM structure. This makes future style changes more difficult.
 
-    ```javascript
+    ```html
     <section class="card" id="mycard">
       <header class="card-header">
         <h4 class="card-title">Weather</h4>
@@ -2202,8 +2190,8 @@
         <p>Sunny!</p>
       </article>
     </section>
-    
-        
+    ```
+    ```javascript
     /* avoid - expects certain DOM elements to be used, which might not be necessary */
     var title = $('section#mycard h4.card-title').text();    
     
@@ -2219,12 +2207,12 @@
   
     > Why? CSS classes are expected to have styles defined. A CSS class with no styles is confusing and messy to anyone not working on the JavaScript at that time, and is likely to be removed without knowing how it's used in jQuery. This is made more dangerous considering that there would likely be no tests to check for this.
 
-    ```javascript
+    ```css
     <style>
       #site-nav {  }
     </style>
-       
-    
+    ```
+    ```javascript    
     /* avoid */
     <nav id="site-nav" class="mynav"></nav>
     
