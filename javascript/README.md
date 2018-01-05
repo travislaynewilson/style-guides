@@ -7,6 +7,7 @@
   1. [Objects](#objects)
   1. [Arrays](#arrays)
   1. [Strings](#strings)
+  1. [Numbers](#numbers)
   1. [Functions](#functions)
   1. [Properties](#properties)
   1. [Variables](#variables)
@@ -361,6 +362,43 @@
 
 **[⬆ back to top](#table-of-contents)**
 
+
+
+
+## Numbers
+
+  - **Avoid** using the global `isNaN`. Use `Number.isNaN` instead.
+  
+    > Why? The global `isNaN` coerces non-numbers to numbers, returning true for anything that coerces to `NaN`. If this behavior is desired, make it explicit.
+
+    ```javascript
+    /* avoid */
+    isNaN('1.2'); // false
+    isNaN('1.2.3'); // true
+    
+    /* good */
+    Number.isNaN('1.2'); // false
+    Number.isNaN('1.2.3'); // false
+    Number.isNaN(Number('1.2.3')); // true
+    ```
+    
+    
+  - **Avoid** using the global `isFinite`. Use `Number.isFinite` instead.
+  
+    > Why? The global `isFinite` coerces non-numbers to numbers, returning true for anything that coerces to a finite number. If this behavior is desired, make it explicit.
+
+    ```javascript
+    /* avoid */
+    isFinite('2e3'); // true
+    
+    /* good */
+    Number.isFinite('2e3'); // false
+    Number.isFinite(parseInt('2e3', 10)); // true
+    ```
+    
+    
+    
+**[⬆ back to top](#table-of-contents)**
 
 
 
