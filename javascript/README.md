@@ -1241,23 +1241,44 @@ When writing JavaScript for the web, do your best to apply these philosophies at
     > Why? Custom exceptions allow your code to be more expressive and intentional. You an also check for the error's type to give your `catch` blocks more information on how to handle an exception.
     
     ```javascript
-    var CustomError = (function(super) {
-      extends(CustomError, super);
-    
-      // CTOR
+    /**
+     * Exception that occurs in a special situation
+     * @param {string} foo - Some thing we want to capture in this case
+     * @param {string} message - Error message
+     * @param {string} fileName - Path to file that raised this error
+     * @param {number} lineNumber - Line number in file that raised this error
+     */
+    var CustomError = (function() {
       function CustomError(foo, message, fileName, lineNumber) {
-        var instance = new super(message, fileName, lineNumber);
+        var instance = new Error(message, fileName, lineNumber);
         instance.foo = foo;
 
-        if (super.captureStackTrace) {
-          super.captureStackTrace(instance, CustomError);
+        Object.setPrototypeOf(instance, Object.getPrototypeOf(this));
+
+        if (Error.captureStackTrace) {
+          Error.captureStackTrace(instance, CustomError);
         }
 
         return instance;
       }
-      
+
+      CustomError.prototype = Object.create(Error.prototype, {
+        constructor: {
+          value: Error,
+          enumerable: false,
+          writable: true,
+          configurable: true
+        }
+      });
+
+      if (Object.setPrototypeOf){
+        Object.setPrototypeOf(CustomError, Error);
+      } else {
+        CustomError.__proto__ = Error;
+      }
+
       return CustomError;
-    }(Error));
+    }());
     ```
     
     ```javascript
