@@ -1,4 +1,5 @@
 # Travis' JavaScript Style Guide
+<!-- https://github.com/airbnb/javascript/blob/master/README.md -->
 
 *A reasonable approach to writing quality ES5 JavaScript code*
 
