@@ -1233,7 +1233,7 @@ When writing JavaScript for the web, do your best to apply these philosophies at
 
     /* good */
     throw new Error('Invalid data');
-  ```
+    ```
   
   
   - **Do** create custom `Error` exception classes to convey additional error information. They should be defined and used wherever the native Error type is insufficient.
