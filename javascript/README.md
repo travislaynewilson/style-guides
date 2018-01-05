@@ -936,6 +936,9 @@
     var y = undefined;
     console.log(y);
     // > 1
+    
+    console.log(void 0);
+    // > undefined
     ```
     
 
