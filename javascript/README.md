@@ -18,7 +18,7 @@
   1. [Whitespace](#whitespace)
   1. [Commas](#commas)
   1. [Semicolons](#semicolons)
-  1. [Type Casting & Coercion](#type-casting--coercion)
+  <!--1. [Type Casting & Coercion](#type-casting--coercion)
   1. [Naming Conventions](#naming-conventions)
   1. [Accessors](#accessors)
   1. [Events](#events)
@@ -34,7 +34,7 @@
   1. [Chat With Us About JavaScript](#chat-with-us-about-javascript)
   1. [Contributors](#contributors)
   1. [License](#license)
-  1. [Amendments](#amendments)
+  1. [Amendments](#amendments)-->
 
 
 
@@ -1423,3 +1423,156 @@
 
 
 
+
+## Commas
+
+  - **Avoid** leading commas: 
+
+    ```javascript
+    /* avoid */
+    var story = [
+        once
+      , upon
+      , aTime
+    ];
+
+    /* good */
+    var story = [
+      once,
+      upon,
+      aTime
+    ];
+
+    /* avoid */
+    const hero = {
+        firstName: 'Ada'
+      , lastName: 'Lovelace'
+      , birthYear: 1815
+      , superPower: 'computers'
+    };
+
+    /* good */
+    const hero = {
+      firstName: 'Ada',
+      lastName: 'Lovelace',
+      birthYear: 1815,
+      superPower: 'computers'
+    };
+    ```
+
+  
+  - **Consider** adding additional trailing commas.
+
+    > Why? This can lead to cleaner version diffs. Also, transpilers like Babel and TypeScript will remove the additional trailing comma in the transpiled code, which means you don’t have to worry about the trailing comma problem in legacy browsers (if you're using a transpiler).
+
+    ```diff
+    /* ugly - git diff without trailing comma */
+    var hero = {
+         firstName: 'Florence',
+    -    lastName: 'Nightingale'
+    +    lastName: 'Nightingale',
+    +    inventorOf: ['coxcomb chart', 'modern nursing']
+    };
+
+    /* good - git diff with trailing comma */
+    var hero = {
+         firstName: 'Florence',
+         lastName: 'Nightingale',
+    +    inventorOf: ['coxcomb chart', 'modern nursing'],
+    };
+    ```
+
+    ```javascript
+    /* clean */
+    var hero = {
+      firstName: 'Dana',
+      lastName: 'Scully'
+    };
+
+    var heroes = [
+      'Batman',
+      'Superman'
+    ];
+
+    /* trailing */
+    var hero = {
+      firstName: 'Dana',
+      lastName: 'Scully',
+    };
+
+    var heroes = [
+      'Batman',
+      'Superman',
+    ];
+
+    /* clean */
+    function createHero(
+      firstName,
+      lastName,
+      inventorOf
+    ) {
+      // does nothing
+    }
+
+    /* trailing */
+    function createHero(
+      firstName,
+      lastName,
+      inventorOf,
+    ) {
+      // does nothing
+    }
+    ```
+
+**[⬆ back to top](#table-of-contents)**
+
+
+
+
+## Semicolons
+
+
+  - **Do** include semicolors after each statement and expression.
+
+    > Why? When JavaScript encounters a line break without a semicolon, it uses a set of rules called [Automatic Semicolon Insertion](https://tc39.github.io/ecma262/#sec-automatic-semicolon-insertion) to determine whether or not it should regard that line break as the end of a statement, and (as the name implies) place a semicolon into your code before the line break if it thinks so. ASI contains a few eccentric behaviors, though, and your code will break if JavaScript misinterprets your line break. These rules will become more complicated as new features become a part of JavaScript. Explicitly terminating your statements and configuring your linter to catch missing semicolons will help prevent you from encountering issues.
+
+    ```javascript
+    /* avoid - raises exception */
+    var luke = {}
+    var leia = {}
+    [luke, leia].forEach(jedi => jedi.father = 'vader')
+
+    /* avoid - raises exception */
+    var reaction = "No! That's impossible!"
+    (function meanwhileOnTheFalcon(){
+      // handle `leia`, `lando`, `chewie`, `r2`, `c3p0`
+      // ...
+    }())
+
+    /* avoid - returns `undefined` instead of the value on the next line - always happens when `return` is on a line by itself because of ASI! */
+    function foo() {
+      return
+        'search your feelings, you know it to be foo'
+    }
+
+    /* good */
+    var luke = {},
+    var leia = {};
+    [luke, leia].forEach((jedi) => {
+      jedi.father = 'vader';
+    });
+
+    /* good */
+    var reaction = "No! That's impossible!";
+    (function meanwhileOnTheFalcon(){
+      // handle `leia`, `lando`, `chewie`, `r2`, `c3p0`
+      // ...
+    }());
+
+    /* good */
+    function foo() {
+      return 'search your feelings, you know it to be foo';
+    }
+    ```
+
+**[⬆ back to top](#table-of-contents)**
