@@ -334,7 +334,7 @@
     
     ```javascript
     /* avoid */
-    eval('alert("Hello world!"));
+    eval('alert("Hello world!")');
     ```
     
 
