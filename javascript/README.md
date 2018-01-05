@@ -1974,10 +1974,22 @@ When writing JavaScript for the web, do your best to apply these philosophies at
 
     ```javascript
     /* good */
-    var HTTPStatus  = {
+    var HttpStatus = {
       PAGE_NOT_FOUND: 404,
       INTERNAL_SERVER_ERROR: 500
-    }
+    };
+    ```
+    
+    
+  - **Do** use `CONSTANT_CASE` when naming constants.
+  
+  
+  
+  - **Do** use camelCase when naming function parameters. One-character parameter names should not be used in public methods.
+
+    ```javascript
+    /* good */
+    function getUser(id, firstName) {}
     ```
 
   
@@ -2000,26 +2012,25 @@ When writing JavaScript for the web, do your best to apply these philosophies at
     ```
 
 
-  - **Do** name acronyms and initialisms as all capitalized, or all lowercased.
+  - **Do** name acronyms and initialisms as either capitalized or all lowercased. The casing of the original words should be almost entirely disregarded.
 
     > Why? Names are for readability, not to appease a computer algorithm.
 
     ```javascript
 
     /* avoid */
-    var HttpRequests = [
-      // ...
-    ];
+    var XMLHTTPRequest; // const
+    var newCustomerID;
+    var innerStopWatch;
+    var supportsIPv6OnIOS;
+    var ID;
 
     /* good */
-    var HTTPRequests = [
-      // ...
-    ];
-
-    /* good */
-    var httpRequests = [
-      // ...
-    ];
+    var XmlHttpRequest; // const
+    var newCustomerId;
+    var innerStopwatch;
+    var supportsIpv6OnIos;
+    var Id;
     ```
     
     
