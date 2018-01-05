@@ -2136,6 +2136,129 @@
           .css('background-color', 'green');
     }
     ```
+    
+    
+  - **Do** contextualize your DOM queries when working in elements that may appear somewhere else on the page.
+  
+    > Why? Without contextualization, your DOM queries could affect unintended elements.
+
+    ```javascript
+    <div id="mywidget">
+      <section class="card">
+        <header class="card-header">
+          <h4 class="card-title">Weather</h4>
+        </header>
+        <article class="card-body">
+          <p>Sunny!</p>
+        </article>
+      </section>
+    </div>
+    
+        
+    /* avoid */
+    $('.card').hide();
+
+    /* good */
+    var $context = $('#mywidget');
+    $('.card', $context).hide();
+    ```
+    
+    
+    
+  - **Do** start all DOM queries from an ID when an ID is available and reasonably-positioned near your desired element(s), and traverse from there.
+  
+    > Why? Querying DOM elements by ID is much faster and more performant than querying by class names or `[data]` attributes.
+
+    ```javascript
+    <section class="card" id="mycard">
+      <header class="card-header">
+        <h4 class="card-title">Weather</h4>
+      </header>
+      <article class="card-body">
+        <p>Sunny!</p>
+      </article>
+    </section>
+    
+        
+    /* avoid */
+    var title = $('.card .card-title').text();
+    var title = $('.card').find('.card-title').text();
+
+    /* good */
+    var title = $('#mycard').find('.card-title').text();
+    ```
+    
+    
+  - **Avoid** unnecessarily-precise selectors when possible. Opt for the loosest query possible.
+  
+    > Why? The more precise a selector is, the more tightly-coupled the jQuery call is to the current DOM structure. This makes future style changes more difficult.
+
+    ```javascript
+    <section class="card" id="mycard">
+      <header class="card-header">
+        <h4 class="card-title">Weather</h4>
+      </header>
+      <article class="card-body">
+        <p>Sunny!</p>
+      </article>
+    </section>
+    
+        
+    /* avoid - expects certain DOM elements to be used, which might not be necessary */
+    var title = $('section#mycard h4.card-title').text();    
+    
+    /* avoid - rigid nesting structure is overkill */
+    var title = $('.card .card-header .card-title').text();
+
+    /* good - starts with an ID and it's lean */
+    var title = $('#mycard .card-title').text();
+    ```
+    
+    
+  - **Avoid** creating CSS classes solely to query DOM elements in jQuery. Use existing IDs and classes to query DOM elements, and create `[data-attributes]` when none exist.
+  
+    > Why? CSS classes are expected to have styles defined. A CSS class with no styles is confusing and messy to anyone not working on the JavaScript at that time, and is likely to be removed without knowing how it's used in jQuery. This is made more dangerous considering that there would likely be no tests to check for this.
+
+    ```javascript
+    <style>
+      #site-nav {  }
+    </style>
+       
+    
+    /* avoid */
+    <nav id="site-nav" class="mynav"></nav>
+    
+    var $nav = $('.mynav');
+    
+
+    /* good */
+    <nav id="site-nav"></nav>
+    
+    var $nav = $('#site-nav');
+    
+    
+    /* best */
+    <nav id="site-nav" [data-nav]="site"></nav>
+    
+    var $nav = $('[data-nav="site"]');
+    ```
+    
+    
+  - **Do** use object literal syntax when creating new DOM elements in memory.
+
+    ```javascript
+    /* avoid */
+    var $div = $('<div class="foo"></div>');
+    
+    /* avoid */
+    var $div = $('<div></div>');
+    $div.addClass('foo');
+
+    /* good */
+    var $div = $('<div />', {
+      class: 'foo'
+    });
+    ```
 
   
   - **Do** cascading `$('parent descendant')`, parent > child `$('parent > child')` or `.find()`/`.children()` for DOM queries. Use context selectors only if your context is stored in an object reference.
