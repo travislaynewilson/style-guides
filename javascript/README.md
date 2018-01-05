@@ -660,9 +660,9 @@
     ```
     
     
-  - **Do** extend classes when appropriate
+  - **Do** extend classes and write base classes to be extended.
 
-    > Why? Working with object-oriented code is wonderful.
+    > Why? Working with object-oriented code is so wonderful.
 
     ```javascript
     /**
