@@ -1310,7 +1310,7 @@ When writing JavaScript for the web, do your best to apply these philosophies at
     } catch(ok) {
       // it's not numeric; that's fine, just continue.
     }
-  ```
+    ```
 
 
 **[⬆ back to top](#table-of-contents)**
