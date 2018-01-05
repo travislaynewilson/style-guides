@@ -677,6 +677,9 @@ When writing JavaScript for the web, do your best to apply these philosophies at
       AuthService.someStaticMethod = function() {};
             
       // Public methods
+      AuthService.prototype._ = function(fn) {
+        return fn.apply(this, Array.prototype.slice.call(arguments).slice(1));
+      };
       AuthService.prototype.login = function(username, password) {};
       AuthService.prototype.logout = function() {};
       
