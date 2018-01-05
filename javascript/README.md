@@ -24,7 +24,6 @@
   1. [Events](#events)
   1. [jQuery](#jquery)
   1. [ECMAScript 5 Compatibility](#ecmascript-5-compatibility)
-  1. [ECMAScript 6+ (ES 2015+) Styles](#ecmascript-6-es-2015-styles)
   1. [Standard Library](#standard-library)
   1. [Testing](#testing)
   1. [Performance](#performance)
@@ -617,7 +616,7 @@
     ```
 
 
-  - **Do** use one `var` declaration for multiple vaiables.
+  - **Do** use one `var` declaration for multiple variables.
 
     > Why? It’s easier to add new variable declarations this way, and you reduce the risk of leaving off a `var` and creating a global variable.
 
@@ -683,5 +682,14 @@
     num += 1;
     num -= 1;
     ```
+
+**[⬆ back to top](#table-of-contents)**
+
+
+
+
+## Hoisting
+
+  - **Do** declare your `var` declarations before you reference it.  
 
 **[⬆ back to top](#table-of-contents)**
