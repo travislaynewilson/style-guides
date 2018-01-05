@@ -1912,18 +1912,22 @@ When writing JavaScript for the web, do your best to apply these philosophies at
 ## Naming Conventions
 
   
-  - **Avoid** single letter names. Be descriptive with your naming.
+  - **Do** give all identifiers as descriptive a name as possible. Do not worry about saving horizontal space, as it is far more important to make your code immediately understandable by a new reader. Do not use abbreviations that are ambiguous or unfamiliar to readers outside your project, and do not abbreviate by deleting letters within a word.
 
     ```javascript
     /* avoid */
-    function q() {
-      // ...
-    }
+    n                     // Meaningless.
+    nErr                  // Ambiguous abbreviation.
+    nCompConns            // Ambiguous abbreviation.
+    wgcConnections        // Only your group knows what this stands for.
+    pcReader              // Lots of things can be abbreviated "pc".
+    cstmrId               // Deletes internal letters.
+    kSecondsPerDay        // Do not use Hungarian notation.
 
     /* good */
-    function query() {
-      // ...
-    }
+    priceCountReader      // No abbreviation.
+    numErrors             // "num" is a widespread convention.
+    numDnsConnections     // Most people know what "DNS" stands for.
     ```
 
   
