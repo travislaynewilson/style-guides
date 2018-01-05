@@ -17,6 +17,7 @@
   1. [Comparison Operators & Equality](#comparison-operators--equality)
   1. [Blocks](#blocks)
   1. [Control Statements](#control-statements)
+  1. [Exceptions](#exceptions)
   1. [Comments](#comments)
   1. [Whitespace](#whitespace)
   1. [Commas](#commas)
@@ -1213,6 +1214,32 @@ When writing JavaScript for the web, do your best to apply these philosophies at
       thing1();
     }
     ```
+
+**[⬆ back to top](#table-of-contents)**
+
+
+
+
+
+## Exceptions
+
+  - **Do** provide a comment in empty `catch` blocks explaining why it's justified to take no action when an exception occurs.
+  
+  ```javascript
+  /* avoid */
+  try {
+    shouldFail();
+  } catch (expected) {}
+  
+  
+  /* good */
+  try {
+    return handleNumericResponse(response);
+  } catch (ok) {
+    // it's not numeric; that's fine, just continue.
+  }
+  ```
+
 
 **[⬆ back to top](#table-of-contents)**
 
