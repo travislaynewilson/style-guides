@@ -2017,7 +2017,7 @@
 
   - **Consider** not using jQuery in your application.
   
-    > Why? The best quality web JavaScript code separates the model from the view, and is written to be testable and object-oriented. Direct access to the DOM results in your JavaScript being tightly-coupled to your view. It also encourages the view to contain state, which makes testing very difficult. Lastly, jQuery makes it tempting to query the DOM frequently, and with modern browsers becoming more performant each year, it's easy to miss performance concerns on weaker computers and mobile devices.
+    > Why? The best quality web JavaScript code separates the model from the view, and is written to be testable and object-oriented. Direct access to the DOM results in your JavaScript being tightly-coupled to your view. It also encourages the view to contain state, which makes testing very difficult. jQuery's ease of use and low barrier-to-entry makes it tempting to query the DOM frequently, and with modern browsers becoming more performant each year, it's easy to miss performance concerns on weaker computers and mobile devices. Lastly, there are far superior techniques and patterns for working with the DOM that have become popular since jQuery, such as [VueJS](https://vuejs.org/). jQuery is now despised by most modern web developers, who consider it antiquated, slow (relative to other solutions), unscalable and responsible for many poorly-trained developers, anti-patterns and poorly-written websites present on the web today.
 
   
   - **Do** prefix jQuery object variables with a `$`.
