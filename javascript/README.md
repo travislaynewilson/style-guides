@@ -1809,6 +1809,23 @@
     ```
     
     
+  - **Do** name a boolean property/method with a verb prefix to represent the value as a state, such as `isVal` or `hasVal` instead of `val`.
+
+    ```javascript
+    /* avoid */
+    var old = false;
+    if (!dragon.age()) {
+      return false;
+    }
+
+    /* good */
+    var isOld = false;
+    if (!dragon.hasAge()) {
+      return false;
+    }
+    ```
+    
+    
   - **Do** use consistent file names for all assets named after what they represent. Use only lowercase file names. Use dashes to separate words, acronyms and initialisms in the file name.
 
     ```javascript
@@ -1867,5 +1884,72 @@
 **[⬆ back to top](#table-of-contents)**
 
 
+
+
+## Accessors
+
+
+  - **Avoid** using JavaScript getters/setters. Instead, if you do make accessor functions, use getVal() and setVal('hello').
+  
+    > Why? They cause unexpected side effects and are harder to test, maintain and reason about. 
+  
+    ```javascript
+    /* avoid */
+    class Dragon {
+      get age() {
+        // ...
+      }
+
+      set age(value) {
+        // ...
+      }
+    }
+    
+    /* avoid */
+    class Dragon {
+      Object.defineProperty(this, 'age', {
+        get: function() {
+            // ...
+        },
+        set: function(value) {
+            // ...
+        }
+      });
+    }
+
+    /* good */
+    class Dragon {
+      getAge() {
+        // ...
+      }
+
+      setAge(value) {
+        // ...
+      }
+    }
+    ```
+
+
+  - **Do** create get() and set() functions in objects when appropriate, but be consistent.
+
+    ```javascript
+    class Jedi {
+      constructor(options = {}) {
+        const lightsaber = options.lightsaber || 'blue';
+        this.set('lightsaber', lightsaber);
+      }
+
+      set(key, val) {
+        this[key] = val;
+      }
+
+      get(key) {
+        return this[key];
+      }
+    }
+    ```
+    
+    
+**[⬆ back to top](#table-of-contents)**
 
 
