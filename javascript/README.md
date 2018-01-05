@@ -693,3 +693,136 @@
   - **Do** declare your `var` declarations before you reference it.  
 
 **[⬆ back to top](#table-of-contents)**
+
+
+
+
+## Comparison Operators & Equality
+
+  - **Do** use `===` and `!==` over `==` and `!=`. 
+
+  - **Understand** that conditional statements such as the `if` statement evaluate their expression using coercion with the `ToBoolean` abstract method and always follow these simple rules:
+
+    - **Objects** evaluate to **true**
+    - **Undefined** evaluates to **false**
+    - **Null** evaluates to **false**
+    - **Booleans** evaluate to **the value of the boolean**
+    - **Numbers** evaluate to **false** if **+0, -0, or NaN**, otherwise **true**
+    - **Strings** evaluate to **false** if an empty string `''`, otherwise **true**
+
+    ```javascript
+    if ([0] && []) {
+      // true
+      // an array (even an empty one) is an object, objects will evaluate to true
+    }
+    ```
+
+  
+  - **Do** use shortcuts for booleans when possible. Prefer explicit comparisons for strings.
+
+    ```javascript
+    /* avoid - too verbose */
+    if (isValid === true) {
+      // ...
+    }
+
+    /* good */
+    if (isValid) {
+      // ...
+    }
+
+    /* avoid - not enough info to accurately evaluate this string as a boolean
+    if (name) {
+      // ...
+    }
+
+    /* good */
+    if (name !== '') {
+      // ...
+    }
+
+    /* good, but verbose because 0 is falsey
+    if (collection.length > 0) {
+      // ...
+    }
+
+    /* good */
+    if (collection.length) {
+      // ...
+    }
+
+    ```
+
+
+
+  - **Avoid** nesting ternary expressions. Try to format them as single line expressions if readability doesn't suffer.
+
+    ```javascript
+    /* avoid - nesting */
+    var foo = maybe1 > maybe2
+      ? "bar"
+      : value1 > value2 ? "baz" : null;      
+      
+    /* avoid - poor readability */
+    var foo = originalValue > newValue ? 'The value has changed' : 'The value has not changed at all. Better luck next time!';
+
+    /* good */
+    var foo = originalValue > newValue
+      ? 'The value has changed'
+      : 'The value has not changed at all. Better luck next time!';
+
+    /* good */
+    var foo = maybe1 > maybe2 ? 'bar' : maybeNull;
+    ```
+
+  - **Avoid** unneeded ternary statements.
+
+    ```javascript
+    /* avoid */
+    var foo = a ? a : b;
+    var bar = c ? true : false;
+    var baz = c ? false : true;
+
+    /* good */
+    var foo = a || b;
+    var bar = !!c;
+    var baz = !c;
+    ```
+
+  - **Do** enclose operators in parentheses when they are mixed in a statement. When mixing arithmetic operators, do not mix `**` and `%` with themselves or with `+`, `-`, `*`, & `/`.
+
+    > Why? This improves readability and clarifies the developer’s intention.
+
+    ```javascript
+    /* avoid */
+    var foo = a && b < 0 || c > 0 || d + 1 === 0;
+
+    /* avoid */
+    var bar = a ** b - 5 % d;
+
+    /* avoid */
+    // one may be confused into thinking (a || b) && c
+    if (a || b && c) {
+      return d;
+    }
+
+    /* good */
+    var foo = (a && b < 0) || c > 0 || (d + 1 === 0);
+
+    /* good */
+    var bar = (a ** b) - (5 % d);
+
+    /* good */
+    if (a || (b && c)) {
+      return d;
+    }
+
+    /* good */
+    var bar = a + b / c * d;
+    ```
+
+**[⬆ back to top](#table-of-contents)**
+
+
+
+
