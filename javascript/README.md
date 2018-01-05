@@ -633,6 +633,8 @@
     ```javascript
     /* avoid - does not support `new` keyword, private methods or static methods. */
     var AuthService = {
+      somePrivateProperty: 1,
+      somePublicProperty: 2,
       someStaticMethod: function() {},
       somePrivateHelper: function() {},
       login: function(username, password) {},
@@ -641,9 +643,14 @@
  
  
     /* good */
-    var AuthService = (function () {    
+    var AuthService = (function () {   
+      // Private properties
+      var somePrivateProperty = 1;
+    
       // CTOR
-      function AuthService() {}
+      function AuthService() {
+        this.somePublicProperty = 2;
+      }
       
       // Private helpers
       function somePrivateHelper() {}
