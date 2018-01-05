@@ -38,7 +38,7 @@ When writing JavaScript for the web, do your best to apply these philosophies at
 
   - **Testable**: Your code should work as if the DOM didn't exist. 
   
-  - **Functional**: Your code should be favor pure functions, avoiding shared state, mutable data, and side-effects.
+  - **Functional**: Your code should favor pure functions when possible, avoiding shared state, mutable data, and side-effects.
   
   - **Modular**: Your code should follow the [single responsibility principal (SRP)](https://en.wikipedia.org/wiki/Single_responsibility_principle).
   
