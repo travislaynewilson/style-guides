@@ -2449,6 +2449,7 @@ When writing JavaScript for the web, do your best to apply these philosophies at
 
 Here is a list of libraries we use in most projects:
 
+  - **[Axios](https://github.com/axios/axios)**: AJAX
   - **[Bluebird](http://bluebirdjs.com)**: Promises
   - **[Bowser](https://github.com/lancedikson/bowser)**: Browser detector
   - **[Enquire](https://github.com/WickyNilliams/enquire.js/)**: Programatically responding to media queries
