@@ -2547,6 +2547,7 @@ Here is a list of libraries we use in most projects:
   - **[Lodash](https://lodash.com/)**: Common functional utilities 
   - **[Moment](https://momentjs.com/)**: Parse, validate, manipulate, and display dates and times    
   - **[NodeJS](https://nodejs.org)**: JavaScript runtime   
+  - **[npm](https://www.npmjs.com/)**: JavaScript package manager   
   - **[Postal](https://github.com/postaljs/postal.js)**: In-memory message bus
   - **[RequireJS](http://requirejs.org/)**: AMD loader
   - **[Store](https://github.com/marcuswestin/store.js)**: Cross-browser storage
