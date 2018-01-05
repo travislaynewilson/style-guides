@@ -1,12 +1,11 @@
 # Travis' JavaScript Style Guide
 
-*A reasonable approach to writing quality JavaScript code*
+*A reasonable approach to writing quality ES5 JavaScript code*
 
 ## Table of Contents
 
   1. [Objects](#objects)
   1. [Arrays](#arrays)
-  1. [Destructuring](#destructuring)
   1. [Strings](#strings)
   1. [Functions](#functions)
   1. [Arrow Functions](#arrow-functions)
@@ -238,6 +237,119 @@
     ];
 
     var numberInArray = [1, 2];
+    ```
+
+**[⬆ back to top](#table-of-contents)**
+
+
+
+
+
+## Strings
+
+  - **Do** use single quotes `''` for strings.
+
+    ```javascript
+    /* avoid */
+    var name = "Capt. Janeway";
+    
+    /* avoid - template literals should contain interpolation or newlines */
+    const name = `Capt. Janeway`;
+    
+    /* good */
+    var name = 'Capt. Janeway';
+    ```
+    
+    
+  - **Consider** using string concatenation with arrays when writing multiple lines of HTML.
+
+    > Why? String concatenation is painful to work with and make code less searchable. Most JS engines will support tabbed formatting in arrays.
+
+    ```javascript
+    /* avoid */
+    var html = '<div> \
+    Hello world! \
+    </div>';
+
+    /* avoid */
+    var html = '<div>' +
+      'Hello world!' +
+      '</div>';
+
+    /* better */
+    var html = [
+      '<div>',
+        'Hello world!',
+      '</div>'
+    ].join();
+    
+    /* best - don't write HTML in your JavaScript! */
+    ```
+
+  - **Avoid** using string concatenation when writing text strings that cause the line to go over 100 characters.
+
+    > Why? Broken strings are painful to work with and make code less searchable.
+
+    ```javascript
+    /* avoid */
+    var errorMessage = 'This is a super long error that was thrown because \
+    of Batman. When you stop to think about how Batman had anything to do \
+    with this, you would get nowhere \
+    fast.';
+
+    /* avoid */
+    var errorMessage = 'This is a super long error that was thrown because ' +
+      'of Batman. When you stop to think about how Batman had anything to do ' +
+      'with this, you would get nowhere fast.';
+
+    /* good */
+    var errorMessage = 'This is a super long error that was thrown because of Batman. When you stop to think about how Batman had anything to do with this, you would get nowhere fast.';
+    ```
+
+
+  - **Do** use template strings instead of concatenation when programmatically building up strings and the browser supports it.
+
+    > Why? Template strings give you a readable, concise syntax with proper newlines and string interpolation features.
+
+    ```javascript
+    /* avoid */
+    function sayHi(name) {
+      return 'How are you, ' + name + '?';
+    }
+
+    /* good */
+    function sayHi(name) {
+      return ['How are you, ', name, '?'].join();
+    }
+
+    /* best, if available */
+    function sayHi(name) {
+      return `How are you, ${name}?`;
+    }
+    ```
+
+  - **Avoid** using `eval()` on a string.
+  
+    > Why? It opens too many vulnerabilities.
+    
+    ```javascript
+    /* avoid */
+    eval('alert("Hello world!"));
+    ```
+    
+
+
+  - **Avoid** unnecessarily escaping characters in strings.
+
+    > Why? Backslashes harm readability, thus they should only be present when necessary.
+
+    ```javascript
+    /* avoid */
+    var foo = '\'this\' \i\s \"quoted\"';
+
+    /* good */
+    var foo = '\'this\' is "quoted"';
+    var foo = `my name is '${name}'`;
     ```
 
 **[⬆ back to top](#table-of-contents)**
