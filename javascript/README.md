@@ -1576,3 +1576,99 @@
     ```
 
 **[⬆ back to top](#table-of-contents)**
+
+
+
+
+## Type Casting & Coercion
+
+  
+  - **Do** perform type coercion at the beginning of the statement.
+
+  
+  - **Do** coerce strings using the `String` global object
+
+    ```javascript
+    this.reviewScore = 9;
+
+    /* avoid - typeof totalScore is "object", not "string" */
+    var totalScore = new String(this.reviewScore);
+
+    /* avoid - invokes this.reviewScore.valueOf()*/
+    var totalScore = this.reviewScore + '';
+
+    /* avoid - isn’t guaranteed to return a string */
+    var totalScore = this.reviewScore.toString();
+
+    /* good */
+    var totalScore = String(this.reviewScore);
+    ```
+
+  
+  - **Do** coerce numbers using the `Number` global object and `parseInt`. When using `parseInt`, provide a radix to clarify the base in the intended mathematical numeral system (usually 10 for the decimal numeral system commonly used by humans).
+
+    > Why? Defining the radix when using `parseInt` eliminates reader confusion and guarantees predictable behavior. Different implementations produce different results when a radix is not specified, usually defaulting the value to 10.
+    
+    ```javascript
+    var inputValue = '4';
+
+    /* avoid - typeof val is "object", not "number" */
+    var val = new Number(inputValue);
+
+    /* avoid - coercion is far less performant than `parseInt` in Chrome */
+    var val = +inputValue;
+
+    /* avoid - bitshifting is far less performant than `parseInt` in Firefox in most cases */
+    var val = inputValue >> 0;
+
+    /* avoid - no radix defined */
+    var val = parseInt(inputValue);
+
+    /* good */
+    var val = Number(inputValue);
+
+    /* good */
+    var val = parseInt(inputValue, 10);
+    ```
+
+  
+  - **Consider** using bitshift to coerce a number if, for whatever reason, you are doing something wild and `parseInt` is a  bottleneck for [performance reasons](https://jsperf.com/coercion-vs-casting/3). Leave a comment explaining why and what you're doing.
+
+    > Note:  Be careful when using bitshift operations. Numbers are represented as 64-bit values, but bitshift operations always return a 32-bit integer ([source](https://es5.github.io/#x11.7)). Bitshifting can lead to unexpected behavior for integer values larger than 32 bits. Largest signed 32-bit integer is 2,147,483,647.
+    
+    ```javascript
+    /* good */
+    /**
+     * parseInt was the reason my code was slow.
+     * Bitshifting the String to coerce it to a
+     * Number made it a lot faster.
+     */
+    var val = inputValue >> 0;
+    ```
+
+
+  - **Understand** that bitshift operations always return a 32-bit integer ([source](https://es5.github.io/#x11.7)). Numbers are natively represented as 64-bit values. Bitshifting can lead to unexpected behavior for integer values larger than 32 bits. Largest signed 32-bit integer is 2,147,483,647.
+
+    ```javascript
+    2147483647 >> 0; // => 2147483647
+    2147483648 >> 0; // => -2147483648
+    2147483649 >> 0; // => -2147483647
+    ```
+
+  
+  - **Do** coerce booleans using coercion. The `Boolean` global object can also be used, but is more verbose.
+
+    ```javascript
+    var age = 0;
+
+    /* avoid - typeof hasAge is "object", not "boolean" */
+    var hasAge = new Boolean(age);
+
+    /* good */
+    var hasAge = Boolean(age);
+
+    /* best */
+    var hasAge = !!age;
+    ```
+
+**[⬆ back to top](#table-of-contents)**
