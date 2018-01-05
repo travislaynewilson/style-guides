@@ -923,6 +923,21 @@
     ```
 
 
+  - **Avoid** checking for `undefined` using the keyword `undefined`. Use `void 0` instead.
+  
+    > Why? `undefined` is actually a global property, not a keyword. `undefined` can be changed, where as `void` is an operator which cannot be overridden in JavaScript and is used to obtain the `undefined` primitive value.
+      
+    ```javascript
+    var x = undefined;
+    console.log(x);
+    // > undefined
+
+    var undefined = 1;
+    var y = undefined;
+    console.log(y);
+    // > 1
+    ```
+    
 
   - **Avoid** nesting ternary expressions. Try to format them as single line expressions if readability doesn't suffer.
 
