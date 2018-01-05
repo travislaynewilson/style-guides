@@ -8,8 +8,6 @@
   1. [Arrays](#arrays)
   1. [Strings](#strings)
   1. [Functions](#functions)
-  1. [Classes & Constructors](#classes--constructors)
-  1. [Modules](#modules)
   1. [Properties](#properties)
   1. [Variables](#variables)
   1. [Hoisting](#hoisting)
@@ -559,6 +557,131 @@
       bar,
       baz
     );
+    ```
+
+**[⬆ back to top](#table-of-contents)**
+
+
+
+## Properties
+
+  - **Do** use dot notation when accessing properties.
+
+    ```javascript
+    var luke = {
+      jedi: true,
+      age: 28
+    };
+
+    /* avoid when possible */
+    var isJedi = luke['jedi'];
+
+    /* good */
+    var isJedi = luke.jedi;
+    ```
+
+  
+  - **Do** use bracket notation `[]` when accessing properties with a variable.
+
+    ```javascript
+    var luke = {
+      jedi: true,
+      age: 28
+    };
+
+    function getProp(prop) {
+      return luke[prop];
+    }
+
+    var isJedi = getProp('jedi');
+    ```
+    
+
+**[⬆ back to top](#table-of-contents)**
+
+
+
+
+## Variables
+
+  - **Do** use `var` to declare variables.
+  
+    > Why? Not doing so will result in global variables. We want to avoid polluting the global namespace.
+
+    ```javascript
+    /* avoid */
+    superPower = new SuperPower();
+
+    /* good */
+    var superPower = new SuperPower();
+    ```
+
+
+  - **Do** use one `var` declaration for multiple vaiables.
+
+    > Why? It’s easier to add new variable declarations this way, and you reduce the risk of leaving off a `var` and creating a global variable.
+
+    ```javascript
+    /* avoid */
+    var foo;
+    var items = getItems();
+    var goSportsTeam = true;
+    var dragonball = 'z';
+
+    /* good */
+    var foo,
+        items = getItems(),
+        goSportsTeam = true,
+        dragonball = 'z';
+    ```
+
+
+  - **Avoid** chaining variable assignments.
+
+    > Why? Chaining variable assignments creates implicit global variables.
+
+    ```javascript
+    /* avoid */
+    (function example() {
+      // JavaScript interprets this as:
+      // let a = ( b = ( c = 1 ) );
+      // The `var` keyword only applies to variable a; variables b and c become global variables.
+      var a = b = c = 1;
+    }());
+
+    console.log(a); // throws ReferenceError
+    console.log(b); // 1
+    console.log(c); // 1
+
+    /* good */
+    (function example() {
+      var a = 1;
+      var b = a;
+      var c = a;
+    }());
+
+    console.log(a); // throws ReferenceError
+    console.log(b); // throws ReferenceError
+    console.log(c); // throws ReferenceError
+    ```
+
+  
+  - **Avoid** using unary increments and decrements (++, --).
+
+    > Why? Unary increment and decrement statements are subject to automatic semicolon insertion and can cause silent errors with incrementing or decrementing values within an application. It is also more expressive to mutate your values with statements like `num += 1` instead of `num++` or `num ++`. Disallowing unary increment and decrement statements also prevents you from pre-incrementing/pre-decrementing values unintentionally which can also cause unexpected behavior in your programs.
+
+    ```javascript
+    /* avoid */
+    var array = [1, 2, 3],
+        num = 1;
+    num++;
+    --num;
+
+    /* good */
+    var array = [1, 2, 3],
+        num = 1;
+    num += 1;
+    num -= 1;
     ```
 
 **[⬆ back to top](#table-of-contents)**
