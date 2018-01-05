@@ -1223,21 +1223,72 @@ When writing JavaScript for the web, do your best to apply these philosophies at
 
 ## Exceptions
 
+
+  - **Do** throw `Error`s or subclasses of `Error`: never throw string literals or other objects. Always use `new` when constructing an `Error`.
+  
+    ```javascript
+    /* avoid */
+    throw 'Invalid data';
+    throw Error('Invalid data');
+
+    /* good */
+    throw new Error('Invalid data');
+  ```
+  
+  
+  - **Do** create custom `Error` exception classes to convey additional error information. They should be defined and used wherever the native Error type is insufficient.
+  
+    > Why? Custom exceptions allow your code to be more expressive and intentional. You an also check for the error's type to give your `catch` blocks more information on how to handle an exception.
+    
+    ```javascript
+    var CustomError = (function(super) {
+      extends(CustomError, super);
+    
+      // CTOR
+      function CustomError(foo, message, fileName, lineNumber) {
+        var instance = new super(message, fileName, lineNumber);
+        instance.foo = foo;
+
+        if (super.captureStackTrace) {
+          super.captureStackTrace(instance, CustomError);
+        }
+
+        return instance;
+      }
+      
+      return CustomError;
+    }(Error));
+    ```
+    
+    ```javascript
+    try {
+      foo.bar();
+    } catch(e) {
+      if(e instanceof CustomError) {
+        // something we planned for happened...
+      } else {
+        // something unexpected happened...
+      }
+    }
+    ```
+  
+
+
   - **Do** provide a comment in empty `catch` blocks explaining why it's justified to take no action when an exception occurs.
   
-  ```javascript
-  /* avoid */
-  try {
-    shouldFail();
-  } catch (expected) {}
-  
-  
-  /* good */
-  try {
-    return handleNumericResponse(response);
-  } catch (ok) {
-    // it's not numeric; that's fine, just continue.
-  }
+    ```javascript
+    /* avoid */
+    try {
+      shouldFail();
+    } catch(expected) {}
+
+
+    /* good */
+    try {
+      return handleNumericResponse(response);
+    } catch(ok) {
+      // it's not numeric; that's fine, just continue.
+    }
   ```
 
 
