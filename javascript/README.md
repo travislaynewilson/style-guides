@@ -2540,9 +2540,13 @@ Here is a list of libraries we use in most projects:
   - **[Bowser](https://github.com/lancedikson/bowser)**: Browser detector
   - **[Enquire](https://github.com/WickyNilliams/enquire.js/)**: Programatically responding to media queries
   - **[es6-promise](https://github.com/stefanpenner/es6-promise)**: ECMAScript 6 Promises polyfill
+  - **[Gulp](https://gulpjs.com/)**: JavaScript task runner
   - **[Hammer](https://hammerjs.github.io/)**: Touch gesture support
+  - **[Jasmine](https://jasmine.github.io/)**: Behavior-driven development framework for testing
+  - **[Karma](https://karma-runner.github.io)**: JavaScript test runner
   - **[Lodash](https://lodash.com/)**: Common functional utilities 
   - **[Moment](https://momentjs.com/)**: Parse, validate, manipulate, and display dates and times    
+  - **[NodeJS](https://nodejs.org)**: JavaScript runtime   
   - **[Postal](https://github.com/postaljs/postal.js)**: In-memory message bus
   - **[RequireJS](http://requirejs.org/)**: AMD loader
   - **[Store](https://github.com/marcuswestin/store.js)**: Cross-browser storage
