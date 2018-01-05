@@ -1825,8 +1825,8 @@
     session-context.js
     ```
     
-    
-   - **Do** use conventional type names when applicable, including a suffix like `.service`, `.store`, `.module` and `.util`. Avoid using appreviated type names, such as `.svc`. Invent additional type names if you feel it's appropriate, but take care not to create too many.
+      
+  - **Do** use conventional type names when applicable, including a suffix like `.service`, `.store`, `.module` and `.util`. Avoid using appreviated type names, such as `.svc`. Invent additional type names if you feel it's appropriate, but take care not to create too many.
 
     > Why? Type names provide a consistent way to quickly identify what is in the file, and make searching for a specific file type easy using many IDE's search techniques.
 
@@ -1847,21 +1847,21 @@
     
     
     
-    - **Do** name test specification files the same as the file they test, followed with the suffix `.spec`.
+  - **Do** name test specification files the same as the file they test, followed with the suffix `.spec`.
 
-      > Why? The suffix `.spec` provides a consistent way to quickly identify tests and provides pattern matching for [Karma](http://karma-runner.github.io/) and other test runners. It also helps the file and it's tests stay together in IDE file trees.
+    > Why? The suffix `.spec` provides a consistent way to quickly identify tests and provides pattern matching for [Karma](http://karma-runner.github.io/) and other test runners. It also helps the file and it's tests stay together in IDE file trees.
 
-      ```javascript
-      user-auth.service.js
+    ```javascript
+    user-auth.service.js
 
-      /* avoid */
-      spec.user-auth.service.js
-      user-auth-service.spec.js
-      user-auth.spec.js
+    /* avoid */
+    spec.user-auth.service.js
+    user-auth-service.spec.js
+    user-auth.spec.js
 
-      /* good */
-      user-auth.service.spec.js
-      ```
+    /* good */
+    user-auth.service.spec.js
+    ```
     
 
 **[⬆ back to top](#table-of-contents)**
