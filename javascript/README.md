@@ -22,8 +22,8 @@
   1. [Naming Conventions](#naming-conventions)
   1. [Accessors](#accessors)
   1. [Events](#events)
-  <!--1. [jQuery](#jquery)
-  1. [ECMAScript 5 Compatibility](#ecmascript-5-compatibility)
+  1. [jQuery](#jquery)
+  <!--1. [ECMAScript 5 Compatibility](#ecmascript-5-compatibility)
   1. [Standard Library](#standard-library)
   1. [Testing](#testing)
   1. [Performance](#performance)
@@ -2010,3 +2010,114 @@
     ```
 
   **[⬆ back to top](#table-of-contents)**
+
+
+
+## jQuery
+
+  
+  - **Do** prefix jQuery object variables with a `$`.
+
+    ```javascript
+    /* avoid */
+    var sidebar = $('.sidebar');
+
+    /* good */
+    var $sidebar = $('.sidebar');
+
+    /* good */
+    var $sidebarBtn = $('.sidebar-btn');
+    ```
+
+  
+  - **Do** cache jQuery lookups.
+
+    ```javascript
+    /* avoid */
+    function setSidebar() {
+      $('.sidebar').hide();
+    }
+
+    /* good */
+    function setSidebar() {
+      var $sidebar = $('.sidebar');
+      
+      $sidebar.hide();
+    }
+    ```
+    
+    
+  - **Do** chain jQuery operations when two or more operations are used.
+
+    ```javascript
+    /* avoid */
+    function setSidebar() {
+      var $sidebar = $('.sidebar');
+    
+      $sidebar.hide();
+      $sidebar.css({
+        'background-color': 'pink'
+      });
+    }
+
+    /* good */
+    function setSidebar() {
+      var $sidebar = $('.sidebar');
+      
+      $sidebar
+        .hide()
+        .css({
+          'background-color': 'pink'
+        });
+    }
+    ```
+    
+    
+  - **Do** modify parent and child selectors in a chain using traversal methods like `.find()`, `.children()`, `.siblings()`, `.parent()` and `.end()`.
+  
+    > Why? Traversing and reverse-traversing in a chain is very performant and reduces the number of DOM cycles that need to be made.
+
+    ```javascript
+    /* avoid - too many DOM queries */
+    function setSidebar() {
+      $('ul.first').find('.foo').css('background-color', 'red');
+      $('ul.first').find('.bar').css('background-color', 'green');
+    }
+
+    /* good */
+    function setSidebar() {
+      $('ul.first')
+        .find('.foo')
+          .css('background-color', 'red')
+        .end()
+        .find('.bar')
+          .css('background-color', 'green');
+    }
+    ```
+
+  
+  - **Do** cascading `$('parent descendant')`, parent > child `$('parent > child')` or `.find()`/`.children()` for DOM queries. Use context selectors only if your context is stored in an object reference.
+
+    ```javascript
+    /* avoid */
+    $('ul', '.sidebar').hide();
+    $('.sidebar').find('ul').hide();
+
+    /* good */
+    $('ul', $sidebar).hide();
+    $('.sidebar > ul').hide();
+    $sidebar.find('ul').hide();
+    $sidebar.children('ul').hide();
+    ```
+    
+    
+  - **Do** use shorthand for `$(document).ready()`.
+
+    ```javascript
+    /* avoid */
+    $(document).ready(function() {});
+    $(window).on('load', function() {});
+
+    /* good */
+    $(function() {});
+    ```
