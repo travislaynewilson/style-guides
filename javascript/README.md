@@ -33,11 +33,13 @@
 
 When writing JavaScript for the web, do your best to apply these philosophies at every decision:
 
-  - **Object-oriented & Testable**: Your code should work as if the DOM didn't exist. 
-  
   - **Consistent**: Your project as a whole should look like it was written by a single developer.
+
+  - **Testable**: Your code should work as if the DOM didn't exist. 
   
-  - **Modular**: Your code should follow the [single responsibility principal (SRP)](https://en.wikipedia.org/wiki/Single_responsibility_principle)
+  - **Functional**: Your code should be favor pure functions, avoiding shared state, mutable data, and side-effects.
+  
+  - **Modular**: Your code should follow the [single responsibility principal (SRP)](https://en.wikipedia.org/wiki/Single_responsibility_principle).
   
   - **LIFT**: Your application should be structured such that you can (in order of importance): *locate* code quickly, *identify* the code at a glance, keep the *flattest* structure you can, and *try* to be DRY.
     
