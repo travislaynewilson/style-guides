@@ -713,7 +713,17 @@
       
       return Snake;
     }(Animal));
-  
+    
+    
+    // Try it out!
+    var chupa = new Animal("A chupacabra");
+    chupa.move();
+    // > A chupacabra moved 0m.
+    
+    var sam = new Snake("Sammy the Python");
+    sam.move(5);
+    // > Slithering...
+    // > Sammy the Python moved 5m.  
     ```
     
     
