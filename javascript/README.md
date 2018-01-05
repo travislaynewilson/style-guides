@@ -25,6 +25,7 @@
   1. [Naming Conventions](#naming-conventions)
   1. [Accessors](#accessors)
   1. [Events](#events)
+  1. [Services](#services)
   1. [jQuery](#jquery)
   1. [Libraries](#libraries) 
 
@@ -2187,6 +2188,89 @@ When writing JavaScript for the web, do your best to apply these philosophies at
     ```
 
   **[⬆ back to top](#table-of-contents)**
+
+
+
+
+## Services
+
+  - **Do** write services as singleton classes that can be distributed as AMD modules.
+  
+  - **Do** name your service methods with a verb prefix, like `get`, `create`, `update` and `delete`. Create new prefixes if necessary, but be consistent.
+  
+    ```javascript
+    /* avoid - no prefix */
+    MyService.prototype.user = function(id) {};
+    
+    /* avoid - unconventional prefix */
+    MyService.prototype.fetchUser = function(id) {};
+    
+    /* good*/
+    MyService.prototype.getUser = function(id) {};
+    ```
+    
+    
+  - **Do** document each public method with [JSDoc syntax](http://usejsdoc.org/).
+  
+    ```javascript
+    /**
+     * Gets the user using the provided `id`
+     * @param {number} id - The user's ID
+     * @returns {User} The requested user
+    MyService.prototype.getUser = function(id) {}    
+    ```
+  
+  
+  - **Do** write service methods that return Promises if the method is capable of or expected to of making an asyncronous request to another resource. When deciding if you should return a Promise, consider how mocks of the method would work. When in doubt, return a Promise.
+  
+    > Why? Returning a promise helps to future-proof the method in case an async call needs to be made in the future.
+  
+    ```javascript
+    /* avoid - this will never work */
+    MyService.prototype.getUser = function(id) {
+      ajax.get('/user/' + id)
+        .then(function(user) {
+          return user;
+        })
+        .catch(function(response) {
+          return null;
+        });
+    };
+    
+    /* good - returns the AJAX Promise directly */
+    MyService.prototype.getUser = function(id) {
+      return ajax.get('/user/' + id);
+    };
+    
+    /* good - returns a Promise that resolves after the service does some work */
+    MyService.prototype.getUser = function(id) {
+      return new Promise(function(resolve, reject) {
+        ajax.get('/user/' + id)
+          .then(function(user) {
+            // do something...
+            resolve(user);
+          })
+          .catch(function(response) {
+            reject(response);
+          });
+      });
+    };
+    ```
+    
+  
+  - **Do** try to keep your services small to encourage better testing and mocking.
+  
+  - **Consider** moving data fetching operations to a `.repo` if your service contains any amount of business logic that is applied to data after it's been fetched.
+    
+    > Why? This allows the data to be mocked via dependency injection and the service to be testable.
+  
+  - **Avoid** exposing unnecessary methods and properties publicly. Only expose what is necessary.
+  
+
+
+**[⬆ back to top](#table-of-contents)**
+
+
 
 
 
