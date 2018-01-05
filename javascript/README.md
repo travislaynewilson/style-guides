@@ -57,7 +57,7 @@
     ```
 
 
-  - ** Do ** use property value shorthand.
+  - **Do** use property value shorthand.
 
     > Why? It is shorter to write and descriptive.
 
@@ -125,7 +125,7 @@
     };
     ```
     
-    - **Avoid** trailing commas after the last property of an oject.
+  - **Avoid** trailing commas after the last property of an oject.
 
     > Why? Although most JS engines will gracefully ignore them, trailing commas are unnecessary and lazy.
 
