@@ -1356,15 +1356,13 @@ When writing JavaScript for the web, do your best to apply these philosophies at
 
     ```javascript
     /**
-     * Types of bandersnatches.
+     * Supported temperature scales.
      * @enum {string}
      */
-    var BandersnatchType = {
-      /** This kind is really frumious. */
-      FRUMIOUS: 'frumious',
-      
-      /** The less-frumious kind. */
-      MANXOME: 'manxome'
+    var TemperatureScale  = {
+      CELSIUS: 'celsius',
+      FAHRENHEIT: 'fahrenheit',
+      SOLAR_SCALE: 'solar scale'
     };
     ```
     
