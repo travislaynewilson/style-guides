@@ -1004,3 +1004,148 @@
 
 
 
+
+## Comments
+
+  - **Do** use `/** ... */` for multi-line comments.
+
+    ```javascript
+    /* avoid */
+    // make() returns a new element
+    // based on the passed in tag name
+    //
+    // @param {String} tag
+    // @return {Element} element
+    function make(tag) {
+      // ...
+      return element;
+    }
+
+    /* good */
+    /**
+     * make() returns a new element
+     * based on the passed-in tag name
+     */
+    function make(tag) {
+      // ...
+      return element;
+    }
+    ```
+
+
+  - **Do** use `//` for single line comments. Place single line comments on a newline above the subject of the comment. Put an empty line before the comment unless it’s on the first line of a block.
+
+    ```javascript
+    /* avoid */
+    const active = true;  // is current tab
+
+    /* good */
+    // is current tab
+    const active = true;
+
+    /* avoid - no line above the comment */
+    function getType() {
+      console.log('fetching type...');
+      // set the default type to 'no type'
+      const type = this.type || 'no type';
+
+      return type;
+    }
+
+    /* good */
+    function getType() {
+      console.log('fetching type...');
+
+      // set the default type to 'no type'
+      const type = this.type || 'no type';
+
+      return type;
+    }
+
+    /* good */
+    function getType() {
+      // set the default type to 'no type'
+      const type = this.type || 'no type';
+
+      return type;
+    }
+    ```
+
+
+  - **Do** start all comments with a space to make it easier to read.
+
+    ```javascript
+    /* avoid */
+    //is current tab
+    const active = true;
+
+    /* good */
+    // is current tab
+    const active = true;
+
+    /* avoid */
+    /**
+     *make() returns a new element
+     *based on the passed-in tag name
+     */
+    function make(tag) {
+      // ...
+      return element;
+    }
+
+    /* good */
+    /**
+     * make() returns a new element
+     * based on the passed-in tag name
+     */
+    function make(tag) {
+      // ...
+      return element;
+    }
+    ```
+
+
+  - **Do** prefix your comments with `TODO[Name]` to help other developers quickly understand if you're pointing out a problem that needs to be revisited, or if you're suggesting a solution to the problem that needs to be implemented. These are different than regular comments because they are actionable. 
+
+    ```javascript
+    function make(tag) {
+      // TODO[Travis]: We should probably do something here.
+      return element;
+    }
+    ```
+    
+    
+  - **Do** document your classes, functions, properties using [JSDoc](http://usejsdoc.org/) syntax.
+
+    ```javascript
+    /* avoid */
+    // Adds two numbers together
+    function add(a, b) {
+      return a + b;
+    }
+    
+    /* good */
+    /**
+     * Adds two numbers together
+     * @param {number} a - The first value
+     * @param {number} b - The second value
+     * @return {number} The result of both values added together
+     */
+    function add(a, b) {
+      return a + b;
+    }
+    ```
+    
+    
+  - **Avoid** committing commented-out code into version control.
+  
+    > Why? Old, unused code in source control leads to polluted source code.
+
+    ```javascript
+    /* avoid */
+    /* function make(tag) {
+      return element;
+    }*/
+    ```
+
+**[⬆ back to top](#table-of-contents)**
