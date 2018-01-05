@@ -800,8 +800,7 @@
     /* avoid */
     var bar = a ** b - 5 % d;
 
-    /* avoid */
-    // one may be confused into thinking (a || b) && c
+    /* avoid - one may be confused into thinking (a || b) && c */
     if (a || b && c) {
       return d;
     }
@@ -826,3 +825,117 @@
 
 
 
+## Blocks
+
+  - **Do** use braces with all multi-line blocks.
+
+    ```javascript
+    /* avoid */
+    if (test)
+      return false;
+
+    /* avoid */
+    if (test) return false;
+
+    /* good */
+    if (test) {
+      return false;
+    }
+
+    /* avoid */
+    function foo() { return false; }
+
+    /* good */
+    function bar() {
+      return false;
+    }
+    ```
+
+  
+  - **Do** put `else` on the same line as your `if` block’s closing brace if you're using multi-line blocks with `if` and `else`.
+  
+    ```javascript
+    /* avoid */
+    if (test) {
+      thing1();
+      thing2();
+    }
+    else {
+      thing3();
+    }
+
+    /* good */
+    if (test) {
+      thing1();
+      thing2();
+    } else {
+      thing3();
+    }
+    ```
+
+  
+  - **Avoid** providing an `else` block if it's `if` block always executes a `return` statement. A `return` in an `else if` block following an `if` block that contains a `return` can be separated into multiple `if` blocks.
+
+    ```javascript
+    /* avoid */
+    function foo() {
+      if (x) {
+        return x;
+      } else {
+        return y;
+      }
+    }
+
+    /* avoid */
+    function cats() {
+      if (x) {
+        return x;
+      } else if (y) {
+        return y;
+      }
+    }
+
+    /* avoid */
+    function dogs() {
+      if (x) {
+        return x;
+      } else {
+        if (y) {
+          return y;
+        }
+      }
+    }
+
+    /* good */
+    function foo() {
+      if (x) {
+        return x;
+      }
+
+      return y;
+    }
+
+    /* good */
+    function cats() {
+      if (x) {
+        return x;
+      }
+
+      if (y) {
+        return y;
+      }
+    }
+
+    /* good */
+    function dogs(x) {
+      if (x) {
+        if (z) {
+          return y;
+        }
+      } else {
+        return z;
+      }
+    }
+    ```
+
+**[⬆ back to top](#table-of-contents)**
