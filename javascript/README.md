@@ -26,6 +26,7 @@
   1. [Accessors](#accessors)
   1. [Events](#events)
   1. [jQuery](#jquery)
+  1. [Libraries](#libraries) 
 
 
 
@@ -2440,3 +2441,24 @@ When writing JavaScript for the web, do your best to apply these philosophies at
     
     
   - **Consider** throttling or debouncing certain event handlers, like window resizing, to maximize performance.
+
+
+
+
+## Libraries
+
+Here is a list of preferred libraries.
+
+  - **[Bluebird](http://bluebirdjs.com)**: Promises
+  - **[Bowser](https://github.com/lancedikson/bowser)**: Browser detector
+  - **[Enquire](https://github.com/WickyNilliams/enquire.js/)**: Programatically responding to media queries
+  - **[es6-shim](https://github.com/paulmillr/es6-shim)**: ECMAScript 6 polyfill collection
+  - **[Hammer](https://hammerjs.github.io/)**: Touch gesture support
+  - **[Lodash](https://lodash.com/)**: Common functional utilities, including: 
+    - Iterating arrays, objects, & strings
+    - Manipulating & testing values
+    - Creating composite functions    
+  - **[Moment](https://momentjs.com/)**: Parse, validate, manipulate, and display dates and times    
+  - **[Postal](https://github.com/postaljs/postal.js)**: In-memory message bus
+  - **[RequireJS](http://requirejs.org/)**: AMD loader
+  - **[Vue](https://vuejs.org/)**: MVVM library for rich UI management
