@@ -21,8 +21,8 @@
   1. [Type Casting & Coercion](#type-casting--coercion)
   1. [Naming Conventions](#naming-conventions)
   1. [Accessors](#accessors)
-  <!--1. [Events](#events)
-  1. [jQuery](#jquery)
+  1. [Events](#events)
+  <!--1. [jQuery](#jquery)
   1. [ECMAScript 5 Compatibility](#ecmascript-5-compatibility)
   1. [Standard Library](#standard-library)
   1. [Testing](#testing)
@@ -1933,23 +1933,80 @@
   - **Do** create get() and set() functions in objects when appropriate, but be consistent.
 
     ```javascript
-    class Jedi {
-      constructor(options = {}) {
-        const lightsaber = options.lightsaber || 'blue';
+    var Jedi = (function() {
+      function Jedi(options) {
+        var lightsaber = options.lightsaber || 'blue';
         this.set('lightsaber', lightsaber);
       }
 
-      set(key, val) {
+      Jedi.prototype.set = function(key, val) {
         this[key] = val;
-      }
+      };
 
-      get(key) {
+      Jedi.prototype.set = function(key) {
         return this[key];
-      }
-    }
+      };
+      
+      return Jedi;
+    });
     ```
     
     
 **[⬆ back to top](#table-of-contents)**
 
 
+
+
+## Events
+
+  
+  - **Do** pass an object literal instead of a raw value when attaching data payloads to events.
+  
+    > Why? This allows a subsequent contributor to add more data to the event payload without finding and updating every handler for the event.
+
+    ```javascript
+    /* avoid */
+    $(this).trigger('listingUpdated', listing.id);
+
+    // ...
+
+    $(this).on('listingUpdated', (e, listingId) => {
+      // do something with listingId
+    });
+    ```
+
+    ```javascript
+    /* good */
+    $(this).trigger('listingUpdated', { listingId: listing.id });
+
+    // ...
+
+    $(this).on('listingUpdated', (e, data) => {
+      // do something with data.listingId
+    });
+    ```
+
+
+  - **Do** use namespace suffixes when creating and triggering custom events. Choose namespaces that represent the feature that the event is related to.
+  
+    > Why? Namespace suffixes allow developers to determine if an event belongs to a specific feature, and allows for more convenient unbinding and management by following a consistent naming convention.
+
+    ```javascript
+    /* avoid - no namespace for this custom event */
+    $(this).trigger('updated');
+    
+    /* avoid - namespace words not separated by dashes */
+    $(this).trigger('updated.mycache');
+    
+    /* avoid - namespace in prefix */
+    $(this).trigger('mycache.updated');
+    
+    /* avoid - click fired in custom feature not namespaced */
+    $(this).trigger('click');
+    
+    /* good */
+    $(this).trigger('updated.my-cache');
+    $(this).trigger('click.my-feature');
+    ```
+
+  **[⬆ back to top](#table-of-contents)**
