@@ -9,6 +9,7 @@
   1. [Strings](#strings)
   1. [Numbers](#numbers)
   1. [Functions](#functions)
+  1. [Classes](#classes)
   1. [Properties](#properties)
   1. [Variables](#variables)
   1. [Hoisting](#hoisting)
@@ -618,6 +619,104 @@
     );
     ```
 
+**[⬆ back to top](#table-of-contents)**
+
+
+
+## Classes
+
+  
+  - **Do** create reusable classes whenever possible using prototype.
+
+    > Why? Working with object-oriented code is wonderful.
+
+    ```javascript
+    /* avoid - does not support `new` keyword, private methods or static methods. */
+    var AuthService = {
+      someStaticMethod: function() {},
+      somePrivateHelper: function() {},
+      login: function(username, password) {},
+      logout: function() {}
+    };
+ 
+ 
+    /* good */
+    var AuthService = (function () {    
+      // CTOR
+      function AuthService() {}
+      
+      // Private helpers
+      function somePrivateHelper() {}
+      
+      // Static methods
+      AuthService.someStaticMethod = function() {};
+            
+      // Public methods
+      AuthService.prototype.login = function(username, password) {};
+      AuthService.prototype.logout = function() {};
+      
+      return AuthService;
+    }());
+    ```
+    
+    
+  - **Do** extend classes when appropriate
+
+    > Why? Working with object-oriented code is wonderful.
+
+    ```javascript
+    /**
+     * Extends a class by applying a base class.
+     * @param {class} d - The class to extend
+     * @param {class} b - The base class
+     */
+    var extend = (function () {
+        var extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return function (d, b) {
+            extendStatics(d, b);
+            function __() { this.constructor = d; }
+            d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+        };
+    })();
+    ```
+    ```javascript
+    // Base class
+    var Animal = (function () {
+      function Animal(name) {
+          this.name = name;
+      }
+      
+      Animal.prototype.move = function (distanceInMeters) {
+        if (distanceInMeters === void 0) { distanceInMeters = 0; }
+        console.log(this.name + " moved " + distanceInMeters + "m.");
+      };
+      
+      return Animal;
+    }());
+    
+    
+    // An implementation of `Animal`
+    var Snake = (function (super) {
+      extends(Snake, super);
+      
+      function Snake(name) {
+        return super.call(this, name) || this;
+      }
+      
+      Snake.prototype.move = function (distanceInMeters) {
+        if (distanceInMeters === void 0) { distanceInMeters = 5; }
+        console.log("Slithering...");
+        super.prototype.move.call(this, distanceInMeters);
+      };
+      
+      return Snake;
+    }(Animal));
+  
+    ```
+    
+    
 **[⬆ back to top](#table-of-contents)**
 
 
