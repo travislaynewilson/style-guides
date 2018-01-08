@@ -37,7 +37,9 @@ Your UI should address the user using either:
   ```
   
 
-Avoid mixing "me"/"my" with "you"/"your.” It can cause confusion to see both forms of addressing the user in the same context.
+Avoid mixing "me"/"my" with "you"/"your.”
+
+  > Why? It can cause confusion to see both forms of addressing the user in the same context.
 
   ```
   /* avoid */
