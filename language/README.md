@@ -131,7 +131,7 @@
 
   Good | Avoid
   ---- | -----
-  Click **Continue** | Click the Continue button
+  ```Click **Continue**``` | Click the Continue button
   
   
   
