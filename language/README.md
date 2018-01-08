@@ -45,9 +45,10 @@
 
   > Why? It can cause confusion to see both forms of addressing the user in the same context.
 
-  Good | Avoid
-  ---- | -----
-  Change your preferences | Change your preferences in My Account
+  ```
+  /* avoid */
+  Change your preferences in My Account
+  ```
  
   
   
