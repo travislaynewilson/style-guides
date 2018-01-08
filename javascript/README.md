@@ -62,7 +62,7 @@ When writing JavaScript for the web, do your best to apply these philosophies at
 
   - **Do** use property value shorthand when possible.
 
-    > Why? It is shorter to write, descriptive and DRY.
+    > Why? It's shorter to write, descriptive and DRY.
 
     ```javascript
     var lukeSkywalker = 'Luke Skywalker';
