@@ -145,31 +145,18 @@
   
 - Avoid industry-specific terminology or names invented for UI features.
 
-  ```
-  /* avoid */
-  Buffering…
-  
-  "Exporting to PDF" is only supported on dual-core devices
-  
-  
-  /* good */
-  Preparing video…
-  
-  “Exporting to PDF” isn’t supported on your phone  
-  ```
+
+  Insead of... | Do this...
+  ------------ | ----------
+  Buffering… | Preparing video… 
+  "Exporting to PDF" is only supported on dual-core devices | “Exporting to PDF” isn’t supported on your phone
+
   
 - Refer users to the labels on UI elements, not the type of element (such as menu or button).
 
-  ```
-  /* avoid */
-  Click the Continue button
-  
-  /* good */
-  Click Continue
-  ```
-  
-  
-  
+  Insead of... | Do this...
+  ------------ | ----------
+  Click the Continue button | Click **Continue**
   
   
   
