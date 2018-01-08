@@ -147,8 +147,7 @@
   Learn more | Takes the user to additional content
   Next | Takes the user to the next step of a multi-step process
   No thanks | Allows a user to decline 
-  Not now | Let’s a user postpone an action or decision. Use only when the call to action in the dialog is essential to the functionality of the product, for legal reasons, or for another urgent reason.  
-  Do not use “Not now” as a mechanism to avoid providing a “No thanks” option.
+  Not now | Let’s a user postpone an action or decision. Use only when the call to action in the dialog is essential to the functionality of the product, for legal reasons, or for another urgent reason.<br /><br />**Warning**: Do not use “Not now” as a mechanism to avoid providing a “No thanks” option.  
   Skip | Gives the user a way to avoid an interruption and proceed with a task
   
   
