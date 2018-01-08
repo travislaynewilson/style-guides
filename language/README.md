@@ -5,6 +5,7 @@
 ## Table of Contents
 
   1. [Language](#language)
+      1. [Addressing users](#addressing-users)
   1. [Tone](#tone)
   1. [Capitalization](#capitalization)
   1. [Punctuation](#punctuation)
@@ -13,6 +14,7 @@
 
 
 ## Language
+
 
 ### Addressing users
 
@@ -33,3 +35,12 @@ Your UI should address the user using either:
 
   My Account
   ```
+  
+
+Avoid mixing "me"/"my" with "you"/"your.” It can cause confusion to see both forms of addressing the user in the same context.
+
+  ```
+  /* avoid */
+  Change your preferences in My Account
+  ```
+  
