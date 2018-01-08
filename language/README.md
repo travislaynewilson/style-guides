@@ -10,6 +10,7 @@
       1. [Be concise](#be-concise)
       1. [Write in the present](#write-in-the-present)
       1. [Write simply and directly](#write-simply-and-directly)
+      1. [Text for buttons and related elements](#text-for-buttons-and-related-elements)
   1. [Tone](#tone)
   1. [Capitalization](#capitalization)
   1. [Punctuation](#punctuation)
