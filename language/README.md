@@ -7,6 +7,7 @@
   1. [Language](#language)
       1. [Addressing users](#addressing-users)
       1. [Avoid the pronoun "we"](#avoid-the-pronoun-we)
+      1. [Be concise](#be-concise)
   1. [Tone](#tone)
   1. [Capitalization](#capitalization)
   1. [Punctuation](#punctuation)
@@ -71,4 +72,26 @@
     We’ll review your appeal and respond within a few days
     ```
     
+    
+### Be consise
+
+- Write in small, scannable segments to facilitate navigation and discovery.
+
+  ```
+  /* avoid */
+  Send (and receive) money with friends and family in the US with an email address. It’s a two-step process with little-to-no latency and there aren’t any charges for the recipients of the money.
   
+  /* good */
+  Send money to anyone in the US who has an email address. It’s fast, easy, and free.
+  ```
+
+
+- Keep your sentences and phrases short, with as few concepts as possible.
+
+  ```
+  /* avoid */
+  Consult the documentation that came with your phone for further instructions
+  
+  /* good */
+  Read the instructions that came with your phone
+  ```
