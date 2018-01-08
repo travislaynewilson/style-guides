@@ -45,10 +45,10 @@
 
   > Why? It can cause confusion to see both forms of addressing the user in the same context.
 
-  ```
-  /* avoid */
-  Change your preferences in My Account
-  ```
+  Good | Avoid
+  ---- | -----
+  Change your preferences | Change your preferences in My Account
+ 
   
   
 ### Avoid the pronoun "we"
@@ -56,13 +56,10 @@
 
 - Focus on the user and what they can do with your app, rather than what you or your app is doing for the user.
 
-  ```
-  /* avoid */
-  To get you started, we’re showing you the most popular posts this week
+  Good | Avoid
+  ---- | -----
+  Get started with these popular posts | To get you started, we’re showing you the most popular posts this week.
   
-  /* good */
-  Get started with these popular posts
-  ```
   
   - **Note:** One exception is when a person takes an action for a user, such as reviewing an appeal or responding to a suggestion. Here, the use of “we” is appropriate.
   
@@ -79,25 +76,16 @@
 
 - Write in small, scannable segments to facilitate navigation and discovery.
 
-  ```
-  /* avoid */
-  Send (and receive) money with friends and family in the US with an email address. It’s a two-step 
-  process with little-to-no latency and there aren’t any charges for the recipients of the money.
-  
-  /* good */
-  Send money to anyone in the US who has an email address. It’s fast, easy, and free.
-  ```
+  Good | Avoid
+  ---- | -----
+  Send money to anyone in the US who has an email address. It’s fast, easy, and free. | Send (and receive) money with friends and family in the US with an email address. It’s a two-step process with little-to-no latency and there aren’t any charges for the recipients of the money.
 
 
 - Keep your sentences and phrases short, with as few concepts as possible.
 
-  ```
-  /* avoid */
-  Consult the documentation that came with your phone for further instructions
-  
-  /* good */
-  Read the instructions that came with your phone
-  ```
+  Good | Avoid
+  ---- | -----
+  Read the instructions that came with your phone | Consult the documentation that came with your phone for further instructions
 
 
 ### Write in the present
@@ -114,49 +102,35 @@
 
   Common introductory phrases may be omitted.
   
-  ```
-  /* avoid */
-  Would you like to save your changes?
-  
-  Message has been sent
-  
-  You must register before you can vote
-  
-  
-  /* good */
-  Save changes?
-  
-  Message sent
-  
-  Register to vote  
-  ```
+  Good | Avoid
+  ---- | -----
+  Save changes? | Would you like to save your changes?
+  Message sent | Message has been sent
+  Register to rate | You must register before you can rate this pharmacy
+ 
   
 ### Write for all levels of readers
 
 - Pick common words that are clearly and easily understandable to both beginning and advanced English readers.
 
-  ```
-  /* avoid */
-  Enable Location History
+  Good | Avoid
+  ---- | -----
+  Turn on Location History | Enable Location History
   
-  /* good */
-  Turn on Location History
-  ```
   
 - Avoid industry-specific terminology or names invented for UI features.
 
-
-  Insead of... | Do this...
-  ------------ | ----------
-  Buffering… | Preparing video… 
-  "Exporting to PDF" is only supported on dual-core devices | “Exporting to PDF” isn’t supported on your phone
+  Good | Avoid
+  ---- | -----
+  Preparing video…  | Buffering…
+  “Exporting to PDF” isn’t supported on your phone | "Exporting to PDF" is only supported on dual-core devices
 
   
 - Refer users to the labels on UI elements, not the type of element (such as menu or button).
 
-  Insead of... | Do this...
-  ------------ | ----------
-  Click the Continue button | Click **Continue**
+  Good | Avoid
+  ---- | -----
+  Click **Continue** | Click the Continue button
   
   
   
