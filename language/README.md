@@ -124,7 +124,7 @@
   Good | Avoid
   ---- | -----
   Preparing video…  | Buffering…
-  “Exporting to PDF” isn’t supported on your phone | "Exporting to PDF" is only supported on dual-core devices
+  ```“Exporting to PDF” isn’t supported on your phone``` | "Exporting to PDF" is only supported on dual-core devices
 
   
 - Refer users to the labels on UI elements, not the type of element (such as menu or button).
