@@ -18,26 +18,26 @@
 
 ### Addressing users
 
-Your UI should address the user using either:
+- Your UI should address the user using either:
 
-- **Second person, “you” or “your”**: Use this conversational style for most situations, as though the app is speaking directly to the user.
-  
-  ```
-  Quickly open the camera without unlocking your screen
+  - **Second person, “you” or “your”**: Use this conversational style for most situations, as though the app is speaking directly to the user.
 
-  Your places
-  ```
+    ```
+    Quickly open the camera without unlocking your screen
 
-- **First person, “I” or “my”**: In some cases, you may need to use this form of address to emphasize the user's ownership of content or actions.
+    Your places
+    ```
 
-  ```
-  I agree to follow the Google Terms of Service
+  - **First person, “I” or “my”**: In some cases, you may need to use this form of address to emphasize the user's ownership of content or actions.
 
-  My Account
-  ```
-  
+    ```
+    I agree to follow the Google Terms of Service
 
-Avoid mixing "me"/"my" with "you"/"your.”
+    My Account
+    ```
+
+
+- Avoid mixing "me"/"my" with "you"/"your.”
 
   > Why? It can cause confusion to see both forms of addressing the user in the same context.
 
