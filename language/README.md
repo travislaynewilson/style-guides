@@ -64,13 +64,9 @@
   
   - **Note:** One exception is when a person takes an action for a user, such as reviewing an appeal or responding to a suggestion. Here, the use of “we” is appropriate.
   
-    ```
-    /* avoid */
-    Your appeal will be reviewed, and you will receive a response within a few days
-    
-    /* good */
-    We’ll review your appeal and respond within a few days
-    ```
+    Good | Avoid
+    ---- | -----
+    We’ll review your appeal and respond within a few days | Your appeal will be reviewed, and you will receive a response within a few days
     
     
 ### Be concise
