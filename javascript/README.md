@@ -207,7 +207,7 @@ When writing JavaScript for the web, do your best to apply these philosophies at
     ```
     
     
-    - **Consider** including [trailing commas](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Trailing_commas) after the last value in an array.
+  - **Consider** including [trailing commas](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Trailing_commas) after the last value in an array.
 
     > Why? Trailing commas can make version-control diffs cleaner and editing code might be less troublesome.
 
