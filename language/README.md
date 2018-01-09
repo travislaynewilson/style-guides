@@ -36,33 +36,33 @@
 
 ### Addressing users
 
-- Your UI should address the user using either:
+Your UI should address the user using either:
 
-  - **Second person, “you” or “your”**: Use this conversational style for most situations, as though the app is speaking directly to the user.
-
-    ```
-    Quickly open the camera without unlocking your screen
-
-    Your places
-    ```
-
-  - **First person, “I” or “my”**: In some cases, you may need to use this form of address to emphasize the user's ownership of content or actions.
-
-    ```
-    I agree to follow the Google Terms of Service
-
-    My Account
-    ```
-
-
-- Avoid mixing "me"/"my" with "you"/"your.”
-
-  > Why? It can cause confusion to see both forms of addressing the user in the same context.
+- **Second person, “you” or “your”**: Use this conversational style for most situations, as though the app is speaking directly to the user.
 
   ```
-  /* avoid */
-  Change your preferences in My Account
+  Quickly open the camera without unlocking your screen
+
+  Your places
   ```
+
+- **First person, “I” or “my”**: In some cases, you may need to use this form of address to emphasize the user's ownership of content or actions.
+
+  ```
+  I agree to follow the Google Terms of Service
+
+  My Account
+  ```
+
+
+Avoid mixing "me"/"my" with "you"/"your.”
+
+> Why? It can cause confusion to see both forms of addressing the user in the same context.
+
+```
+/* avoid */
+Change your preferences in My Account
+```
  
 **[⬆ back to top](#table-of-contents)**
 
@@ -70,19 +70,14 @@
   
 ### Avoid the pronoun "we"
 
+Focus on the user and what they can do with your app, rather than what you or your app is doing for the user.
 
-- Focus on the user and what they can do with your app, rather than what you or your app is doing for the user.
+One exception is when a person takes an action for a user, such as reviewing an appeal or responding to a suggestion. Here, the use of “we” is appropriate.
 
-  Good | Avoid
-  ---- | -----
-  Get started with these popular posts | To get you started, we’re showing you the most popular posts this week.
-  
-  
-  - **Note:** One exception is when a person takes an action for a user, such as reviewing an appeal or responding to a suggestion. Here, the use of “we” is appropriate.
-  
-    Good | Avoid
-    ---- | -----
-    We’ll review your appeal and respond within a few days | Your appeal will be reviewed, and you will receive a response within a few days
+Good | Avoid
+---- | -----
+Get started with these popular posts | To get you started, we’re showing you the most popular posts this week.
+We’ll review your appeal and respond within a few days | Your appeal will be reviewed, and you will receive a response within a few days
     
 **[⬆ back to top](#table-of-contents)**
     
@@ -90,18 +85,14 @@
     
 ### Be concise
 
-- Write in small, scannable segments to facilitate navigation and discovery.
+Write in small, scannable segments to facilitate navigation and discovery.
 
-  Good | Avoid
-  ---- | -----
-  Send money to anyone in the US who has an email address. It’s fast, easy, and free. | Send (and receive) money with friends and family in the US with an email address. It’s a two-step process with little-to-no latency and there aren’t any charges for the recipients of the money.
+Keep your sentences and phrases short, with as few concepts as possible.
 
-
-- Keep your sentences and phrases short, with as few concepts as possible.
-
-  Good | Avoid
-  ---- | -----
-  Read the instructions that came with your phone | Consult the documentation that came with your phone for further instructions
+Good | Avoid
+---- | -----
+Send money to anyone in the US who has an email address. It’s fast, easy, and free. | Send (and receive) money with friends and family in the US with an email address. It’s a two-step process with little-to-no latency and there aren’t any charges for the recipients of the money.
+Read the instructions that came with your phone | Consult the documentation that came with your phone for further instructions
 
 **[⬆ back to top](#table-of-contents)**
 
@@ -109,9 +100,11 @@
 
 ### Write in the present
 
-- Use the present tense to describe product behavior. 
-- Avoid using the future tense to describe the way a product always acts.
-- When you need to write in the past or future, use simple verb forms.
+Use the present tense to describe product behavior. 
+
+Avoid using the future tense to describe the way a product always acts.
+
+When you need to write in the past or future, use simple verb forms.
 
 **[⬆ back to top](#table-of-contents)**
 
@@ -119,16 +112,18 @@
 
 ### Write simply and directly
 
-- Use simple, direct language that is easy for users to understand.
-- Try to keep your content simple and scannable.
-- Common introductory phrases may be omitted.
+Use simple, direct language that is easy for users to understand.
+
+Try to keep your content simple and scannable.
+
+Common introductory phrases may be omitted.
   
-  Good | Avoid
-  ---- | -----
-  Save changes? | Would you like to save your changes?
-  Delete reminder? | Are you sure you want to delete this reminder?
-  Message sent | Message has been sent
-  Register to rate | You must register before you can rate this pharmacy
+Good | Avoid
+---- | -----
+Save changes? | Would you like to save your changes?
+Delete reminder? | Are you sure you want to delete this reminder?
+Message sent | Message has been sent
+Register to rate | You must register before you can rate this pharmacy
  
 **[⬆ back to top](#table-of-contents)**
 
@@ -136,14 +131,15 @@
 
 ### Write conversationally
 
-- Use language that simulates a conversation with the user.
-- Avoid language that solely describes actions pertaining to the UI.
+Use language that simulates a conversation with the user.
+
+Avoid language that solely describes actions pertaining to the UI.
   
-  Good | Avoid
-  ---- | -----
-  Got it | Close window
-  Sign in | Login
-  Done | Save changes
+Good | Avoid
+---- | -----
+Got it | Close window
+Sign in | Login
+Done | Save changes
  
 **[⬆ back to top](#table-of-contents)**
 
@@ -151,26 +147,26 @@
   
 ### Write for all levels of readers
 
-- Pick common words that are clearly and easily understandable to both beginning and advanced English readers.
+Pick common words that are clearly and easily understandable to both beginning and advanced English readers.
 
-  Good | Avoid
-  ---- | -----
-  Turn on notifications | Enable notifications
-  
-  
-- Avoid industry-specific terminology or names invented for UI features.
+Good | Avoid
+---- | -----
+Turn on notifications | Enable notifications
 
-  Good | Avoid
-  ---- | -----
-  Preparing video…  | Buffering…
-  “Exporting to PDF” isn’t supported on your phone | "Exporting to PDF" is only supported on dual-core devices
 
-  
-- Refer users to the labels on UI elements, not the type of element (such as menu or button).
+Avoid industry-specific terminology or names invented for UI features.
 
-  Good | Avoid
-  ---- | -----
-  Click **Continue** | Click the Continue button
+Good | Avoid
+---- | -----
+Preparing video…  | Buffering…
+“Exporting to PDF” isn’t supported on your phone | "Exporting to PDF" is only supported on dual-core devices
+
+
+Refer users to the labels on UI elements, not the type of element (such as menu or button).
+
+Good | Avoid
+---- | -----
+Click **Continue** | Click the Continue button
   
 **[⬆ back to top](#table-of-contents)**
   
@@ -178,16 +174,16 @@
   
 ### Use consistent words in all parts of a feature
 
-  - Use verbs in a consistent manner across the description of an action.
-  - When possible, prefer using verbs that are distinctly associated with the feature.
-  
-  Good | Avoid
-  ---- | -----
-  Remove photo | Delete photo
-  Remove photo? | Remove photo from page?
-  Compose mail | New message
-  Add contact | New contact
-  
+Use verbs in a consistent manner across the description of an action.
+
+When possible, prefer using verbs that are distinctly associated with the feature.
+
+Good | Avoid
+---- | -----
+Remove photo | Delete photo
+Remove photo? | Remove photo from page?
+Compose mail | New message
+Add contact | New contact
   
 **[⬆ back to top](#table-of-contents)**
   
@@ -195,14 +191,15 @@
   
 ### "1, 2, 3", not "one, two, three"
 
-  - Use numerals in place of words for numbers.  
-     - One exception is when mixing uses of numbers, such as "Enter two 3s."
+Use numerals in place of words for numbers.  
+
+One exception is when mixing uses of numbers, such as "Enter two 3s."
   
-  > Why? Using numerals promotes scannability.
-  
-  Good | Avoid
-  ---- | -----
-  You have 3 messages | You have three messages
+> Why? Using numerals promotes scannability.
+
+Good | Avoid
+---- | -----
+You have 3 messages | You have three messages
   
 **[⬆ back to top](#table-of-contents)**
   
@@ -210,13 +207,13 @@
 
 ### Begin with the objective
 
-  - If a sentence describes both an objective and the action needed to achieve that objective, start the sentence with the objective.
+If a sentence describes both an objective and the action needed to achieve that objective, start the sentence with the objective.
   
-  > Why? Starting a sentence with the objective sets the user's expectation early and promotes scannability.
-  
-  Good | Avoid
-  ---- | -----
-  To remove a photo from this album, drag it to the trash | Drag a photo to the trash to remove it from this album
+> Why? Starting a sentence with the objective sets the user's expectation early and promotes scannability.
+
+Good | Avoid
+---- | -----
+To remove a photo from this album, drag it to the trash | Drag a photo to the trash to remove it from this album
 
 **[⬆ back to top](#table-of-contents)**
 
@@ -224,23 +221,23 @@
 
 ### Reveal detail as needed
 
-  - It's not necessary to describe every detail in the first interaction. Reveal increasing detail about features as the user explores them and needs the information.
+It's not necessary to describe every detail in the first interaction. Reveal increasing detail about features as the user explores them and needs the information.
   
-  Good | Avoid
-  ---- | -----
-  Remove downloaded book? | Are you sure you want to remove this downloaded book? You won’t be able to access it unless you’re online.
-  
+Good | Avoid
+---- | -----
+Remove downloaded book? | Are you sure you want to remove this downloaded book? You won’t be able to access it unless you’re online.
+
 **[⬆ back to top](#table-of-contents)**
   
   
   
 ### Never say "never"
 
-  - Avoid “never” and other absolutes.
-  
-  Good | Avoid
-  ---- | -----
-  Your email address isn't shared | We'll never share your email address
+Avoid “never” and other absolutes.
+
+Good | Avoid
+---- | -----
+Your email address isn't shared | We'll never share your email address
 
 **[⬆ back to top](#table-of-contents)**
   
