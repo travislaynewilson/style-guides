@@ -57,6 +57,8 @@
   Change your preferences in My Account
   ```
  
+**[⬆ back to top](#table-of-contents)**
+
   
   
 ### Avoid the pronoun "we"
@@ -75,6 +77,8 @@
     ---- | -----
     We’ll review your appeal and respond within a few days | Your appeal will be reviewed, and you will receive a response within a few days
     
+**[⬆ back to top](#table-of-contents)**
+    
     
 ### Be concise
 
@@ -91,12 +95,16 @@
   ---- | -----
   Read the instructions that came with your phone | Consult the documentation that came with your phone for further instructions
 
+**[⬆ back to top](#table-of-contents)**
+
 
 ### Write in the present
 
 - Use the present tense to describe product behavior. Avoid using the future tense to describe the way a product always acts.
 
   When you need to write in the past or future, use simple verb forms.
+
+**[⬆ back to top](#table-of-contents)**
 
 
 
@@ -112,6 +120,8 @@
   Message sent | Message has been sent
   Register to rate | You must register before you can rate this pharmacy
  
+**[⬆ back to top](#table-of-contents)**
+
   
 ### Write for all levels of readers
 
@@ -136,6 +146,8 @@
   ---- | -----
   Click **Continue** | Click the Continue button
   
+**[⬆ back to top](#table-of-contents)**
+  
   
   
 ### Use consistent words in all parts of a feature
@@ -147,6 +159,7 @@
   Remove photo | Delete photo
   Remove photo? | Remove photo from page?
   
+**[⬆ back to top](#table-of-contents)**
   
   
 ### "1, 2, 3", not "one, two, three"
@@ -161,6 +174,7 @@
   ---- | -----
   You have 3 messages | You have three messages
   
+**[⬆ back to top](#table-of-contents)**
   
 
 ### Begin with the objective
@@ -173,6 +187,7 @@
   ---- | -----
   To remove a photo from this album, drag it to the trash | Drag a photo to the trash to remove it from this album
 
+**[⬆ back to top](#table-of-contents)**
 
 
 ### Reveal detail as needed
@@ -183,6 +198,7 @@
   ---- | -----
   Remove downloaded book? | Are you sure you want to remove this downloaded book? You won’t be able to access it unless you’re online.
   
+**[⬆ back to top](#table-of-contents)**
   
   
 ### Never say "never"
@@ -193,6 +209,7 @@
   ---- | -----
   Your email address isn't shared | We'll never share your email address
 
+**[⬆ back to top](#table-of-contents)**
   
   
 ### Text for buttons and related elements
@@ -212,7 +229,7 @@ No thanks | Allows a user to decline
 Not now | Let’s a user postpone an action or decision. Use only when the call to action in the dialog is essential to the functionality of the product, for legal reasons, or for another urgent reason.<br /><br />**Warning**: Do not use “Not now” as a mechanism to avoid providing a “No thanks” option.  
 Skip | Gives the user a way to avoid an interruption and proceed with a task
   
-  
+**[⬆ back to top](#table-of-contents)**
   
   
   
