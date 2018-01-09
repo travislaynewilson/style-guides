@@ -299,7 +299,7 @@ Sign out | Logout, Log out
 ## Tone 
 
 
-## Be friendly, respectful and focus on the user
+### Be friendly, respectful and focus on the user
 
 Your app’s text should complement its design: intuitive, efficient, casual, and trustworthy.
 
@@ -311,7 +311,7 @@ Good | Avoid
 
 
 
-## Be humble
+### Be humble
 
 Reveal what a feature does, without bragging or over-promising.
 
@@ -323,7 +323,7 @@ More restaurant reviews | All restaurant reviews
 **[⬆ back to top](#table-of-contents)**<br /><br />
 
 
-## Be inviting
+### Be inviting
 
 Focus on the benefits of each feature. Omit implementation details, caveats, and restrictions when features are introduced.
 
@@ -334,7 +334,7 @@ To save power, switch Location mode to Battery saving mode | Manually control GP
 **[⬆ back to top](#table-of-contents)**<br /><br />
 
 
-## Be positive
+### Be positive
 
 Present information in a positive light: it’s reassuring.
 
@@ -347,7 +347,7 @@ Try again | The action failed
 
 
 
-## Be essential
+### Be essential
 
 Communicate essential details, so that users can focus on their own tasks. Sometimes the most effective UI contains no text at all.
 
@@ -360,6 +360,17 @@ Good | Avoid
 
 
 
+## Capitalization
+
+Coming soon!
+
+**[⬆ back to top](#table-of-contents)**<br /><br />
 
 
 
+
+## Punctuation
+
+Coming soon!
+
+**[⬆ back to top](#table-of-contents)**<br /><br />
