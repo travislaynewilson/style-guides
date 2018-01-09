@@ -46,6 +46,8 @@ When writing JavaScript for the web, do your best to apply these philosophies at
   
   - **LIFT**: Your application should be structured such that you can (in order of importance): *locate* code quickly, *identify* the code at a glance, keep the *flattest* structure you can, and *try* to be DRY.
     
+**[⬆ back to top](#table-of-contents)**
+
 
 ## Objects
 
