@@ -248,6 +248,8 @@ To remove a photo from this album, drag it to the trash | Drag a photo to the tr
 ### Reveal detail as needed
 
 It's not necessary to describe every detail in the first interaction. Reveal increasing detail about features as the user explores them and needs the information.
+
+> Why? This keeps the current task at hand focused and simple.
   
 Good | Avoid
 ---- | -----
