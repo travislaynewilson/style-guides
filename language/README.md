@@ -188,11 +188,12 @@ Preparing video…  | Buffering…
 “Exporting to PDF” isn’t supported on your phone | "Exporting to PDF" is only supported on dual-core devices
 
 
-Refer users to the labels on UI elements, not the type of element (such as menu or button).
+Refer users to the labels on UI elements, not the position or type of element (such as menu or button).
 
 Good | Avoid
 ---- | -----
 Click **Continue** | Click the Continue button
+Fill out each field | Complete all the fields below
   
 **[⬆ back to top](#table-of-contents)**<br /><br />
   
