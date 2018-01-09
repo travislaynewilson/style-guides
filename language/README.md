@@ -463,7 +463,8 @@ En dash | &ndash; | `&ndash;` | `\u2013` | Use an en dash instead of a hyphen to
 Ellipsis | &hellip; | `&hellip;` | | Use ellipses to indicate an action in progress or incomplete or truncated text, without a space before the ellipses.<br />Omit ellipses from menu items or buttons that open a dialog or start a process. | Downloading&hellip;
 Exclamation points | ! | | | Avoid exclamation points, as they may come across as shouting | 
 Hyphen | - | | | Use hyphens to represent negative numbers, or to create compound words | -5<br />5-mile walk
-Midline ellipses | • • • | | `\u2026` | Midline ellipses are used to represent numeric truncation and the redaction of sensitive data. | SSN • • • 5678
+Midline ellipses | • • • | | `\u2026`<br />
+`ALT+0149`| Midline ellipses are used to represent numeric truncation and the redaction of sensitive data. | SSN • • • 5678
 Parenthesis | () | | | Use parentheses to define acronyms or jargon | SSL (secure socket layer)
 Periods | . | | | Omit periods on fragments and single sentences, but use them when in a group of two or more sentences.<br />Place periods inside quotation marks. | 
 Primes | &prime;<br />&Prime; | `&prime;`<br />`&Prime;` | `\u2032`<br />`\u2033` | Use prime (&prime;) only in abbreviations for feet, arcminutes, and minutes. <br />Use double-prime (&Prime;) only in abbreviations for inches, arcminutes, and minutes.
