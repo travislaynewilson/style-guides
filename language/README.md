@@ -57,7 +57,7 @@ Your UI should address the user using either:
 - **First person, “I” or “my”**: In some cases, you may need to use this form of address to emphasize the user's ownership of content or actions.
 
   ```
-  I agree to follow the Google Terms of Service
+  I agree to follow the Terms of Service
 
   My Account
   ```
