@@ -12,7 +12,6 @@
       1. [Write simply and directly](#write-simply-and-directly)
       1. [Present choices clearly and positively](#present-choices-clearly-and-positively)
       1. [Write conversationally](#write-conversationally)
-      1. [Text for buttons and related elements](#text-for-buttons-and-related-elements)
       1. [Write for all levels of readers](#write-for-all-levels-of-readers)
       1. [Use consistent words in all parts of a feature](#use-consistent-words-in-all-parts-of-a-feature)
       1. ["1, 2, 3", not "one, two, three"](#1-2-3-not-one-two-three)
