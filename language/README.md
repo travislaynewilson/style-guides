@@ -10,6 +10,7 @@
       1. [Be concise](#be-concise)
       1. [Write in the present](#write-in-the-present)
       1. [Write simply and directly](#write-simply-and-directly)
+      1. [Write conversationally](#write-conversationally)
       1. [Text for buttons and related elements](#text-for-buttons-and-related-elements)
       1. [Write for all levels of readers](#write-for-all-levels-of-readers)
       1. [Use consistent words in all parts of a feature](#use-consistent-words-in-all-parts-of-a-feature)
@@ -23,8 +24,8 @@
 
 
 
-
 ## Language
+
 
 
 ### Addressing users
@@ -80,6 +81,7 @@
 **[⬆ back to top](#table-of-contents)**
     
     
+    
 ### Be concise
 
 - Write in small, scannable segments to facilitate navigation and discovery.
@@ -98,6 +100,7 @@
 **[⬆ back to top](#table-of-contents)**
 
 
+
 ### Write in the present
 
 - Use the present tense to describe product behavior. 
@@ -111,16 +114,33 @@
 ### Write simply and directly
 
 - Use simple, direct language that is easy for users to understand.
-
-  Common introductory phrases may be omitted.
+- Try to keep your content simple and scannable.
+- Common introductory phrases may be omitted.
   
   Good | Avoid
   ---- | -----
   Save changes? | Would you like to save your changes?
+  Delete reminder? | Are you sure you want to delete this reminder?
   Message sent | Message has been sent
   Register to rate | You must register before you can rate this pharmacy
  
 **[⬆ back to top](#table-of-contents)**
+
+
+
+### Write conversationally
+
+- Use language that simulates a conversation with the user.
+- Avoid language that solely describes actions pertaining to the UI.
+  
+  Good | Avoid
+  ---- | -----
+  Got it | Close window
+  Sign in | Login
+  Done | Save changes
+ 
+**[⬆ back to top](#table-of-contents)**
+
 
   
 ### Write for all levels of readers
@@ -129,7 +149,7 @@
 
   Good | Avoid
   ---- | -----
-  Turn on Location History | Enable Location History
+  Turn on notifications | Enable notifications
   
   
 - Avoid industry-specific terminology or names invented for UI features.
@@ -162,11 +182,11 @@
 **[⬆ back to top](#table-of-contents)**
   
   
+  
 ### "1, 2, 3", not "one, two, three"
 
-  - Use numerals in place of words for numbers.
-  
-  One exception is when mixing uses of numbers, such as "Enter two 3s."
+  - Use numerals in place of words for numbers.  
+     - One exception is when mixing uses of numbers, such as "Enter two 3s."
   
   > Why? Using numerals promotes scannability.
   
@@ -175,6 +195,7 @@
   You have 3 messages | You have three messages
   
 **[⬆ back to top](#table-of-contents)**
+  
   
 
 ### Begin with the objective
@@ -190,6 +211,7 @@
 **[⬆ back to top](#table-of-contents)**
 
 
+
 ### Reveal detail as needed
 
   - It's not necessary to describe every detail in the first interaction. Reveal increasing detail about features as the user explores them and needs the information.
@@ -199,6 +221,7 @@
   Remove downloaded book? | Are you sure you want to remove this downloaded book? You won’t be able to access it unless you’re online.
   
 **[⬆ back to top](#table-of-contents)**
+  
   
   
 ### Never say "never"
@@ -219,15 +242,36 @@ Button | Usage
 ------ | -----
 Back | Allows multi-step processes
 Cancel | Cancels an action
+Delete | Deletes an existing item
+Discard | Cancels an action and deletes a current, unsaved work item
 Dismiss | Causes a message or dialog to disappear without any consequences
 Done | Confirms the completion of a multi-step process
-OK | Allows the user to confirm an action that’s relevant to the task at hand
 Got it | Causes a message or dialog to disappear without any consequences (similar to OK)
 Learn more | Takes the user to additional content
 Next | Takes the user to the next step of a multi-step process
 No thanks | Allows a user to decline 
-Not now | Let’s a user postpone an action or decision. Use only when the call to action in the dialog is essential to the functionality of the product, for legal reasons, or for another urgent reason.<br /><br />**Warning**: Do not use “Not now” as a mechanism to avoid providing a “No thanks” option.  
+Not now | Let’s a user postpone an action or decision. Use only when the call to action in the dialog is essential to the functionality of the product, for legal reasons, or for another urgent reason.<br />*Warning*: Do not use “Not now” as a mechanism to avoid providing a “No thanks” option.  
+OK | Allows the user to confirm an action that’s relevant to the task at hand
+Remove | Removes an existing item from a collection of items
+Sign in | Confirms an authenticates action for a user
+Sign out | Confirms a logout action for a user
 Skip | Gives the user a way to avoid an interruption and proceed with a task
+
+Good | Avoid
+---- | -----
+Back | Previous, Go back
+Cancel | Nevermind
+Delete | Destroy
+Done | Save changes, Finish, Submit
+Next | Continue, Proceed, Forward
+No thanks | No, Decline
+Not now | No
+OK | Ok, Okay, Close
+Register | Create account
+Sign in | Login, Log in
+Sign out | Logout, Log out
+
+
   
 **[⬆ back to top](#table-of-contents)**
   
