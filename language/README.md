@@ -362,7 +362,16 @@ Good | Avoid
 
 ## Capitalization
 
-Coming soon!
+
+### Use sentence-style caps
+
+Titles, headings, labels, and menu items should use sentence-style capitalization (capitalizing only the first word of a sentence).
+
+Avoid capitalizing all letters except where the Material spec requires them, such as Button text.
+
+Good | Avoid
+---- | -----
+Search settings | Search Settings
 
 **[⬆ back to top](#table-of-contents)**<br /><br />
 
@@ -371,6 +380,98 @@ Coming soon!
 
 ## Punctuation
 
-Coming soon!
+
+### Skip periods and unnecessary punctuation
+
+To help readers scan text at a glance, avoid using periods and other unnecessary punctuation.
+
+
+
+#### Periods
+
+Avoid using periods in solitary sentences in these elements:
+
+* Labels
+* Hover text
+* Bulleted lists
+* Dialog body text
+
+Periods should be used on:
+
+* Multiple sentences
+* Any sentence followed by a link
+
+Good | Avoid
+---- | -----
+Share your photos with friends. [Learn more]() | Share your photos with friends. [Learn more.]()
+**Undo bulk edit?**<br />If you undo this bulk edit, everything you changed will go back to its previous state | **Undo bulk edit?**<br />If you undo this bulk edit, everything you changed will go back to its previous state.
+
+**[⬆ back to top](#table-of-contents)**<br /><br />
+
+
+
+#### Colons
+
+Skip colons after labels.
+
+Good | Avoid
+---- | -----
+Share with | Share with:
+First name | First name:
+
+**[⬆ back to top](#table-of-contents)**<br /><br />
+
+
+
+### Use contradictions
+
+Use contractions when they make a sentence easier to understand. However, sometimes not "do not" can give more emphasis than "don't" when needed.
+
+Good | Avoid
+---- | -----
+it’s, can’t, wouldn’t, you’re, you’ve, haven’t, don’t | it is, cannot, would not, it’ll, should’ve
+
+**[⬆ back to top](#table-of-contents)**<br /><br />
+
+
+
+### Avoid exclamation points
+
+Avoid exclamation points as they tend to come across as shouting. Some exceptions include greetings or congratulatory messages.
+
+Good | Avoid
+---- | -----
+Welcome! | Learn about the new features of Calendar!
+Saved | Your changes have been saved!
+
+**[⬆ back to top](#table-of-contents)**<br /><br />
+
+
+
+### Punctuation
+
+Use punctuation to add clarity or be grammatically correct.
+
+
+Punctuation | Glyph/character | HTML entity | Unicode | Usage | Example
+----------- | --------------- | ----------- | ------- | ----- | -------
+Colons | : | `&#58;` | `\u003A` | Omit colons on labels.<br />Use them above lists. | Two things: <br />* First<br />* Second
+Commas | , | | | Place commas inside of quotation marks.<br />Use the serial comma in a list of three or more items, except when using an ampersand (&). | 
+Double angle brackets | &laquo;<br />&raquo; | `&laquo;`<br />`&raquo;` | `\u00AB`<br />`\u00BB` | Omit double angle brackets from links or buttons that open another page or step. | 
+Em dash | &mdash; | `&mdash;` | `\u2014` | Use en dashes, not em dashes | 
+En dash | &ndash; | `&ndash;` | `\u2013` | Use an en dash instead of a hyphen to indicate a range, without spaces. <br />Avoid using dashes to separate text. If you must use dashes for this purpose – like this – use an en dash surrounded by spaces. | 3–5 kg
+Ellipsis | &hellip; | `&hellip;` | | Use ellipses to indicate an action in progress or incomplete or truncated text, without a space before the ellipses.<br />Omit ellipses from menu items or buttons that open a dialog or start a process. | Downloading&hellip;
+Exclamation points | ! | | | Avoid exclamation points, as they may come across as shouting | 
+Hyphen | - | | | Use hyphens to represent negative numbers, or to create compound words | -5<br />5-mile walk
+Midline ellipses | • • • | | `\u2026` | Midline ellipses are used to represent numeric truncation and the redaction of sensitive data. | SSN • • • 5678
+Parenthesis | () | | | Use parentheses to define acronyms or jargon | SSL (secure socket layer)
+Periods | . | | | Omit periods on fragments and single sentences, but use them when in a group of two or more sentences.<br />Place periods inside quotation marks. | 
+Primes | &prime;<br />&Prime; | `&prime;`<br />`&Prime;` | `\u2032`<br />`\u2033` | Use prime (&prime;) only in abbreviations for feet, arcminutes, and minutes. <br />Use double-prime (&Prime;) only in abbreviations for inches, arcminutes, and minutes.
+Quotation marks | &ldquo;<br />&rdquo;<br />&lsquo;<br />&rsquo; | `&ldquo;`<br />`&rdquo;`<br />`&lsquo;`<br />`&rsquo;` | `\u201C`<br />`\u201D`<br />`\u2018`<br />`\u2019` | Use quotation marks, not the inch or foot symbols.<br />Use the right single quotation mark for apostrophes. | 
+
+
+
+
+
 
 **[⬆ back to top](#table-of-contents)**<br /><br />
