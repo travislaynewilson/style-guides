@@ -26,7 +26,14 @@
       1. [Be positive](#be-positive)
       1. [Be essential](#be-essential)
   1. [Capitalization](#capitalization)
+      1. [Use sentence-style caps](#use-sentence-style-caps)
   1. [Punctuation](#punctuation)
+      1. [Skip periods and unnecessary punctuation](#skip-periods-and-unnecessary-punctuation)
+          1. [Periods](#periods)
+          1. [Colons](#colons)
+      1. [Use contradictions](#use-contradictions)
+      1. [Avoid exclamation points](#avoid-exclamation-points)
+      1. [Punctuation](#punctuation)
 
 
 
