@@ -152,6 +152,8 @@ All photos and media in this folder will be deleted. | You'll lose all photos an
 Delete | Yes
 Cancel | No
 
+**[⬆ back to top](#table-of-contents)**<br /><br />
+
 
 
 ### Write conversationally
