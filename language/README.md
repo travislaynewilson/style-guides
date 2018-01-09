@@ -20,6 +20,11 @@
       1. [Never say "never"](#never-say-never)
       1. [Text for buttons and related elements](#text-for-buttons-and-related-elements)
   1. [Tone](#tone)
+      1. [Be friendly, respectful, and focus on the user](#be-friendly-respectful-and-focus-on-the-user)
+      1. [Be humble](#be-humble)
+      1. [Be inviting](#be-inviting)
+      1. [Be positive](#be-positive)
+      1. [Be essential](#be-essential)
   1. [Capitalization](#capitalization)
   1. [Punctuation](#punctuation)
 
@@ -293,3 +298,70 @@ Sign out | Logout, Log out
   
   
   
+## Tone 
+
+
+## Be friendly, respectful and focus on the user
+
+Your app’s text should complement its design: intuitive, efficient, casual, and trustworthy.
+
+Good | Avoid
+---- | -----
+**MyApp isn’t responding**<br />Do you want to close it? | **Sorry!**<br />Activity in MyAppActivity (in the MyApp app) is not responding
+
+**[⬆ back to top](#table-of-contents)**
+
+
+
+## Be humble
+
+Reveal what a feature does, without bragging or over-promising.
+
+Good | Avoid
+---- | -----
+All your savings in one place | Great deals at places you’ll love
+More restaurant reviews | All restaurant reviews
+
+**[⬆ back to top](#table-of-contents)**
+
+
+## Be inviting
+
+Focus on the benefits of each feature. Omit implementation details, caveats, and restrictions when features are introduced.
+
+Good | Avoid
+---- | -----
+To save power, switch Location mode to Battery saving mode | Manually control GPS to prevent other apps from using it
+
+**[⬆ back to top](#table-of-contents)**
+
+
+## Be positive
+
+Present information in a positive light: it’s reassuring.
+
+Good | Avoid
+---- | -----
+Use 24 characters or fewer for file names | Your file name must be less than 25 characters
+Try again | The action failed
+
+**[⬆ back to top](#table-of-contents)**
+
+
+
+## Be essential
+
+Communicate essential details, so that users can focus on their own tasks. Sometimes the most effective UI contains no text at all.
+
+Good | Avoid
+---- | -----
+**Processing...**<br />We're contacting PayPal. This can take up to five minutes. | **Processing...**<br />We need to communicate with Paypal servers to process your order. This may take up to five minutes.
+
+**[⬆ back to top](#table-of-contents)**
+
+
+
+
+
+
+
