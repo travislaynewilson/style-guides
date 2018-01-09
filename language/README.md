@@ -100,9 +100,9 @@
 
 ### Write in the present
 
-- Use the present tense to describe product behavior. Avoid using the future tense to describe the way a product always acts.
-
-  When you need to write in the past or future, use simple verb forms.
+- Use the present tense to describe product behavior. 
+- Avoid using the future tense to describe the way a product always acts.
+- When you need to write in the past or future, use simple verb forms.
 
 **[⬆ back to top](#table-of-contents)**
 
