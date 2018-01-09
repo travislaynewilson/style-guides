@@ -64,7 +64,7 @@ Avoid mixing "me"/"my" with "you"/"your.”
 Change your preferences in My Account
 ```
  
-**[⬆ back to top](#table-of-contents)**
+**[⬆ back to top](#table-of-contents)**<br /><br />
 
   
   
@@ -79,7 +79,7 @@ Good | Avoid
 Get started with these popular posts | To get you started, we’re showing you the most popular posts this week.
 We’ll review your appeal and respond within a few days | Your appeal will be reviewed, and you will receive a response within a few days
     
-**[⬆ back to top](#table-of-contents)**
+**[⬆ back to top](#table-of-contents)**<br /><br />
     
     
     
@@ -94,7 +94,7 @@ Good | Avoid
 Send money to anyone in the US who has an email address. It’s fast, easy, and free. | Send (and receive) money with friends and family in the US with an email address. It’s a two-step process with little-to-no latency and there aren’t any charges for the recipients of the money.
 Read the instructions that came with your phone | Consult the documentation that came with your phone for further instructions
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ back to top](#table-of-contents)**<br /><br />
 
 
 
@@ -106,7 +106,7 @@ Avoid using the future tense to describe the way a product always acts.
 
 When you need to write in the past or future, use simple verb forms.
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ back to top](#table-of-contents)**<br /><br />
 
 
 
@@ -125,7 +125,7 @@ Delete reminder? | Are you sure you want to delete this reminder?
 Message sent | Message has been sent
 Register to rate | You must register before you can rate this pharmacy
  
-**[⬆ back to top](#table-of-contents)**
+**[⬆ back to top](#table-of-contents)**<br /><br />
 
 
 
@@ -141,7 +141,7 @@ Got it | Close window
 Sign in | Login
 Done | Save changes
  
-**[⬆ back to top](#table-of-contents)**
+**[⬆ back to top](#table-of-contents)**<br /><br />
 
 
   
@@ -168,7 +168,7 @@ Good | Avoid
 ---- | -----
 Click **Continue** | Click the Continue button
   
-**[⬆ back to top](#table-of-contents)**
+**[⬆ back to top](#table-of-contents)**<br /><br />
   
   
   
@@ -185,7 +185,7 @@ Remove photo? | Remove photo from page?
 Compose mail | New message
 Add contact | New contact
   
-**[⬆ back to top](#table-of-contents)**
+**[⬆ back to top](#table-of-contents)**<br /><br />
   
   
   
@@ -201,7 +201,7 @@ Good | Avoid
 ---- | -----
 You have 3 messages | You have three messages
   
-**[⬆ back to top](#table-of-contents)**
+**[⬆ back to top](#table-of-contents)**<br /><br />
   
   
 
@@ -215,7 +215,7 @@ Good | Avoid
 ---- | -----
 To remove a photo from this album, drag it to the trash | Drag a photo to the trash to remove it from this album
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ back to top](#table-of-contents)**<br /><br />
 
 
 
@@ -227,7 +227,7 @@ Good | Avoid
 ---- | -----
 Remove downloaded book? | Are you sure you want to remove this downloaded book? You won’t be able to access it unless you’re online.
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ back to top](#table-of-contents)**<br /><br />
   
   
   
@@ -239,7 +239,8 @@ Good | Avoid
 ---- | -----
 Your email address isn't shared | We'll never share your email address
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ back to top](#table-of-contents)**<br /><br />
+  
   
   
 ### Text for buttons and related elements
@@ -290,7 +291,7 @@ Register | Create account
 Sign in | Login, Log in
 Sign out | Logout, Log out
   
-**[⬆ back to top](#table-of-contents)**
+**[⬆ back to top](#table-of-contents)**<br /><br />
   
   
   
@@ -306,7 +307,7 @@ Good | Avoid
 ---- | -----
 **MyApp isn’t responding**<br />Do you want to close it? | **Sorry!**<br />Activity in MyAppActivity (in the MyApp app) is not responding
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ back to top](#table-of-contents)**<br /><br />
 
 
 
@@ -319,7 +320,7 @@ Good | Avoid
 All your savings in one place | Great deals at places you’ll love
 More restaurant reviews | All restaurant reviews
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ back to top](#table-of-contents)**<br /><br />
 
 
 ## Be inviting
@@ -330,7 +331,7 @@ Good | Avoid
 ---- | -----
 To save power, switch Location mode to Battery saving mode | Manually control GPS to prevent other apps from using it
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ back to top](#table-of-contents)**<br /><br />
 
 
 ## Be positive
@@ -342,7 +343,7 @@ Good | Avoid
 Use 24 characters or fewer for file names | Your file name must be less than 25 characters
 Try again | The action failed
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ back to top](#table-of-contents)**<br /><br />
 
 
 
@@ -354,7 +355,7 @@ Good | Avoid
 ---- | -----
 **Processing...**<br />We're contacting PayPal. This can take up to five minutes. | **Processing...**<br />We need to communicate with Paypal servers to process your order. This may take up to five minutes.
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ back to top](#table-of-contents)**<br /><br />
 
 
 
