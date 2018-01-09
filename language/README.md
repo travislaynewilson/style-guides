@@ -10,6 +10,7 @@
       1. [Be concise](#be-concise)
       1. [Write in the present](#write-in-the-present)
       1. [Write simply and directly](#write-simply-and-directly)
+      1. [Present choices clearly and positively](#present-choices-clearly-and-positively)
       1. [Write conversationally](#write-conversationally)
       1. [Text for buttons and related elements](#text-for-buttons-and-related-elements)
       1. [Write for all levels of readers](#write-for-all-levels-of-readers)
@@ -136,6 +137,22 @@ Register to rate | You must register before you can rate this pharmacy
 
 
 
+### Present choices clearly and positively
+
+When being asked for a decision, users should be able to understand their choices based on elements like titles and button text alone. 
+
+Use a clear question or statement with an explanation in the content area.
+
+Avoid apologies, ambiguity, or questions, such as “Warning!” or “Are you sure?”.
+
+Good | Avoid
+---- | -----
+Delete user? | Are you sure?
+Delete | Yes
+Cancel | No
+
+
+
 ### Write conversationally
 
 Use language that simulates a conversation with the user.
@@ -246,8 +263,8 @@ Good | Avoid
 ---- | -----
 Your email address isn't shared | We'll never share your email address
 
-**[⬆ back to top](#table-of-contents)**<br /><br />
-  
+**[⬆ back to top](#table-of-contents)**<br /><br />  
+
   
   
 ### Text for buttons and related elements
@@ -374,11 +391,12 @@ Good | Avoid
 
 Titles, headings, labels, and menu items should use sentence-style capitalization (capitalizing only the first word of a sentence).
 
-Avoid capitalizing all letters except where the Material spec requires them, such as Button text.
+Avoid capitalizing all letters except when the web design calls for it, such as Button text.
 
 Good | Avoid
 ---- | -----
 Search settings | Search Settings
+Back to top | Back To Top
 
 **[⬆ back to top](#table-of-contents)**<br /><br />
 
@@ -390,7 +408,9 @@ Search settings | Search Settings
 
 ### Skip periods and unnecessary punctuation
 
-To help readers scan text at a glance, avoid using periods and other unnecessary punctuation.
+Avoid using periods and other unnecessary punctuation.
+
+> Why? It helps readers scan text at a glance.
 
 
 
