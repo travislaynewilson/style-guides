@@ -132,6 +132,61 @@
   
   
   
+### Use consistent words in all parts of a feature
+
+  - Use verbs in a consistent manner across the description of an action.
+  
+  Good | Avoid
+  ---- | -----
+  Remove photo | Delete photo
+  Remove photo? | Remove photo from page?
+  
+  
+  
+### "1, 2, 3", not "one, two, three"
+
+  - Use numerals in place of words for numbers.
+  
+  One exception is when mixing uses of numbers, such as "Enter two 3s."
+  
+  > Why? Using numerals promotes scannability.
+  
+  Good | Avoid
+  ---- | -----
+  You have 3 messages | You have three messages
+  
+  
+
+### Begin with the objective
+
+  - If a sentence describes both an objective and the action needed to achieve that objective, start the sentence with the objective.
+  
+  > Why? Starting a sentence with the objective sets the user's expectation early and promotes scannability.
+  
+  Good | Avoid
+  ---- | -----
+  To remove a photo from this album, drag it to the trash | Drag a photo to the trash to remove it from this album
+
+
+
+### Reveal detail as needed
+
+  - It's not necessary to describe every detail in the first interaction. Reveal increasing detail about features as the user explores them and needs the information.
+  
+  Good | Avoid
+  ---- | -----
+  Remove downloaded book? | Are you sure you want to remove this downloaded book? You won’t be able to access it unless you’re online.
+  
+  
+  
+### Never say "never"
+
+  - Avoid “never” and other absolutes.
+  
+  Good | Avoid
+  ---- | -----
+  Your email address isn't shared | We'll never share your email address
+
   
   
 ### Text for buttons and related elements
