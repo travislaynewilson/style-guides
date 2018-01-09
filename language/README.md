@@ -147,7 +147,8 @@ Avoid apologies, ambiguity, or questions, such as “Warning!” or “Are you s
 
 Good | Avoid
 ---- | -----
-Delete user? | Are you sure?
+Delete folder? | Are you sure?
+All photos and media in this folder will be deleted. | You'll lose all photos and media!
 Delete | Yes
 Cancel | No
 
