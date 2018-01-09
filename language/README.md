@@ -18,6 +18,7 @@
       1. [Begin with the objective](#begin-with-the-objective)
       1. [Reveal detail as needed](#reveal-detail-as-needed)
       1. [Never say "never"](#never-say-never)
+      1. [Text for buttons and related elements](#text-for-buttons-and-related-elements)
   1. [Tone](#tone)
   1. [Capitalization](#capitalization)
   1. [Punctuation](#punctuation)
@@ -173,11 +174,15 @@
 ### Use consistent words in all parts of a feature
 
   - Use verbs in a consistent manner across the description of an action.
+  - When possible, prefer using verbs that are distinctly associated with the feature.
   
   Good | Avoid
   ---- | -----
   Remove photo | Delete photo
   Remove photo? | Remove photo from page?
+  Compose mail | New message
+  Add contact | New contact
+  
   
 **[⬆ back to top](#table-of-contents)**
   
@@ -240,29 +245,41 @@
 
 Button | Usage
 ------ | -----
+Add | Adds an item to a collection
 Back | Allows multi-step processes
+Back to top | Scrolls to the top of the page
 Cancel | Cancels an action
+Collapse | Collapses a collection of items in a view
 Delete | Deletes an existing item
 Discard | Cancels an action and deletes a current, unsaved work item
 Dismiss | Causes a message or dialog to disappear without any consequences
 Done | Confirms the completion of a multi-step process
+Download | Downloads an existing, saved item to their local machine
+Edit | Allows the user to an existing, saved item
+Expand | Expands a collection of items in a view
+Export | Allows the user to bundle and export an item in a specific format to their local machine
+Help & feedback | Opens the support section of the website
 Got it | Causes a message or dialog to disappear without any consequences (similar to OK)
 Learn more | Takes the user to additional content
+Manage | Allows the user to edit or delete an existing, saved item
 Next | Takes the user to the next step of a multi-step process
 No thanks | Allows a user to decline 
 Not now | Let’s a user postpone an action or decision. Use only when the call to action in the dialog is essential to the functionality of the product, for legal reasons, or for another urgent reason.<br />*Warning*: Do not use “Not now” as a mechanism to avoid providing a “No thanks” option.  
 OK | Allows the user to confirm an action that’s relevant to the task at hand
 Remove | Removes an existing item from a collection of items
+Search | Locates an item in a given context
 Sign in | Confirms an authenticates action for a user
 Sign out | Confirms a logout action for a user
 Skip | Gives the user a way to avoid an interruption and proceed with a task
 
+
 Good | Avoid
 ---- | -----
+Add | New
 Back | Previous, Go back
 Cancel | Nevermind
 Delete | Destroy
-Done | Save changes, Finish, Submit
+Done | Save, Save changes, Finish, Submit
 Next | Continue, Proceed, Forward
 No thanks | No, Decline
 Not now | No
@@ -270,8 +287,6 @@ OK | Ok, Okay, Close
 Register | Create account
 Sign in | Login, Log in
 Sign out | Logout, Log out
-
-
   
 **[⬆ back to top](#table-of-contents)**
   
