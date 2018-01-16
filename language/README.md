@@ -490,7 +490,7 @@ Punctuation | Glyph/character | HTML entity | Unicode | Usage | Example
 Colons | : | `&#58;` | `\u003A` | Omit colons on labels.<br />Use them above lists. | Two things: <br />* First<br />* Second
 Commas | , | | | Place commas inside of quotation marks.<br />Use the serial comma in a list of three or more items, except when using an ampersand (&). | 
 Double angle brackets | &laquo;<br />&raquo; | `&laquo;`<br />`&raquo;` | `\u00AB`<br />`\u00BB`<br />`ALT+174`<br />`ALT+175` | Omit double angle brackets from links or buttons that open another page or step. | 
-En dash | &ndash; | `&ndash;` | `\u2013`<br />`ALT+0151` | Use an en dash instead of a hyphen to indicate a range, without spaces. <br />Avoid using dashes to separate text. If you must, use dashes for this purpose – like this – use an en dash surrounded by spaces. | 3–5 kg
+En dash | &ndash; | `&ndash;` | `\u2013`<br />`ALT+0150` | Use an en dash instead of a hyphen to indicate a range, without spaces. <br />Avoid using dashes to separate text. If you must, use dashes for this purpose – like this – use an en dash surrounded by spaces. | 3–5 kg
 Ellipsis | &hellip; | `&hellip;` | `ALT+0133` | Use ellipses to indicate an action in progress or incomplete or truncated text, without a space before the ellipses.<br />Omit ellipses from menu items or buttons that open a dialog or start a process. | Downloading&hellip;
 Exclamation points | ! | | | Avoid exclamation points, as they may come across as shouting | 
 Hyphen | - | | | Use hyphens to represent negative numbers, or to create compound words | -5<br />5-mile walk
